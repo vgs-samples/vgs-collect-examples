@@ -1,0 +1,30 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: 20px 40px;
+  }
+  
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .form-control-static iframe {
+    border: 0 none transparent;
+    height: 100%;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  .form-control-static span.fake-input {
+    background-color: #fff;
+    display: inline-block;
+    height: 27px;
+    padding: 1px;
+    position: relative;
+    width: 100%;
+    border: 0.1rem solid #d1d1d1;
+    border-radius: .4rem;
+    height: 3.8rem;
+    padding: .6rem 1.0rem;
+    margin-bottom: 1.5rem;
+  }
