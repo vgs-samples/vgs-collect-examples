@@ -3,11 +3,17 @@
     max-width: 500px;
   }
   
-  .form-control-static iframe {
+  .form-control-static iframe,
+  .form-control iframe {
     border: 0 none transparent;
     height: 100%;
     vertical-align: middle;
     width: 100%;
+  }
+  
+  .form-control {
+    padding-top: 0;
+    padding-bottom: 0;
   }
   
   .form-control-static span.fake-input {

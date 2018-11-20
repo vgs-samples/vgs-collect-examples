@@ -28,52 +28,128 @@
           Documentation
         </a>
       </div>
+    </section>
 
+    <section class="container pt-5 py-lg-5 ">
       <!--Example Capturing credit card data-->
       <h2 class="mt-5 mb-5">Capturing credit card data</h2>
       <div class="row">
           <div class="col-md-6">
             <form id="cc-form">
                 <fieldset>
-                   <div id="cc-name" class="form-group">
-                     <label for="cc-name-field">Name on card</label>
-                     <div class="form-control-static">
-                       <span class="fake-input"></span>
-                     </div>
-                   </div>
-                 
-                   <div id="cc-number" class="form-group">
-                     <label for="cc-number-field">Credit card number</label>
-                     <div class="form-control-static">
-                       <span class="fake-input"></span>
-                     </div>
-                   </div>
-                   <div id="cc-cvc" class="form-group">
-                     <label for="cc-cvc-field">CVC</label>
-                     <div class="form-control-static">
-                       <span class="fake-input"></span>
-                     </div>
-                   </div>
-                   <div id="cc-expiration-date" class="form-group">
-                     <label for="cc-expiration-date-field">Expiration date</label>
-                     <div class="form-control-static">
-                       <span class="fake-input"></span>
-                     </div>
-                   </div>
+                  <div id="cc-name" class="form-group">
+                    <label for="cc-name-field">Name on card</label>
+                    <span class="form-control"></span>
+                  </div>
+                  <div id="cc-number" class="form-group">
+                    <label for="cc-number-field">Credit card number</label>
+                    <span class="form-control"></span>
+                  </div>
+                  <div id="cc-cvc" class="form-group">
+                    <label for="cc-cvc-field">CVC</label>
+                    <span class="form-control"></span>
+                  </div>
+                  <div id="cc-expiration-date" class="form-group">
+                    <label for="cc-expiration-date-field">Expiration date</label>
+                    <span class="form-control"></span>
+                  </div>
                 </fieldset>
-                   <button type="submit" class="btn btn-info">Submit</button>
+                <button type="submit" class="btn btn-info">Submit</button>
             </form>
         </div>
         <div class="col-md-6">  
-            <pre id="preview"></pre>
-            <pre id="response"></pre> 
+            <pre id="card-preview" class="alert alert-secondary"></pre>
+            <pre id="card-response" class="alert alert-secondary">Responce...</pre> 
         </div>       
       </div>
     </section>
+
+    <section class="container pt-5 py-lg-5 ">
+      <!--Example Capturing credit card data-->
+      <h2 class="mt-5 mb-5">Shipping Address</h2>
+      <div class="row">
+          <div class="col-md-6">
+            <form id="cc-form-shipping-info">
+                <fieldset>
+
+                  <div class="row">
+
+                    <div class="col-sm-6">
+                      <div id="cc-first-name" class="form-group">
+                        <label for="cc-first-name-field">First Name</label>
+                        <span class="form-control"></span>
+                      </div>      
+                    </div>
+
+                    <div class="col-sm-6">
+                      <div id="cc-last-name" class="form-group">
+                        <label for="cc-last-name-field">Last Name</label>
+                        <span class="form-control"></span>
+                      </div>      
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div id="cc-address" class="form-group">
+                        <label for="cc-address-field">Address</label>
+                        <span class="form-control"></span>
+                      </div>      
+                    </div>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div id="cc-country" class="form-group">
+                        <label for="cc-country-field">Country</label>
+                        <span class="form-control"></span>
+                      </div>      
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+
+                    <div class="col-sm-5">
+                      <div id="cc-city" class="form-group">
+                        <label for="cc-city-field">City</label>
+                        <span class="form-control"></span>
+                      </div>      
+                    </div>
+                    
+                    <div class="col-sm-4">
+                      <div id="cc-region" class="form-group">
+                        <label for="cc-region-field">Rregion</label>
+                        <span class="form-control"></span>
+                      </div>      
+                    </div>
+
+                    <div class="col-sm-3">
+                      <div id="cc-zip" class="form-group">
+                        <label for="cc-zip-field">Zip Code</label>
+                        <span class="form-control"></span>
+                      </div>      
+                    </div>
+
+                  </div>
+
+                </fieldset>
+                <button type="submit" class="btn btn-info">Send</button>
+            </form>
+        </div>
+        <div class="col-md-6">  
+            <pre id="shipping-preview" class="alert alert-secondary"></pre>
+            <pre id="shipping-response" class="alert alert-secondary">Responce...</pre> 
+        </div>       
+      </div>
+    </section>
+
     </main>
   </div>
 
   <script src="js/credit-card-example.js"></script>
+  <script src="js/ shipping-info-example.js"></script>
 
 </body>
 </html>
