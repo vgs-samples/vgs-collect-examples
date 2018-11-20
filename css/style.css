@@ -1,11 +1,6 @@
-body {
-    font-family: 'Open Sans', sans-serif;
-    padding: 20px 40px;
-  }
-  
+
   form {
     max-width: 500px;
-    margin: 0 auto;
   }
   
   .form-control-static iframe {
