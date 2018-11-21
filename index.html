@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,143 +14,240 @@
 
   <script src="https://js.verygoodvault.com/js-vgfield-2/development.js"></script>
 </head>
+
 <body>
-  <div class="">
-    <main>
+  <main>
     <section class="container pt-5 py-lg-5 ">
       <div class="text-center ">
         <h1 class="mb-2">Secure Form examples</h1>
-        <p class="mb-4">Secure Form is a javascript library that allows you to integrate secure fields with non-secure fields in your page. 
-            <br>The secure fields behave like traditional input fields while preventing access to the unsecured data.</p>
+        <p class="mb-4">Secure Form is a javascript library that allows you to integrate secure fields with non-secure
+          fields in your page.
+          <br>The secure fields behave like traditional input fields while preventing access to the unsecured data.</p>
         <a href="https://www.verygoodsecurity.com/docs/features/secure-form" class="btn btn-get">
           Learn more
         </a>
-        <a href="https://www.verygoodsecurity.com/docs/features/secure-form"  class="btn btn-get">
+        <!-- <a href="https://www.verygoodsecurity.com/docs/features/secure-form" class="btn btn-get">
           Documentation
-        </a>
+        </a> -->
       </div>
     </section>
 
-    <section class="container pt-5 py-lg-5 ">
+    <section class="container">
+      <div class="row text-center">
+        <div class="col-md-3">
+          <a href="#credit-card-example" class="">Credit Card</a>
+        </div>
+        <div class="col-md-3">
+          <a href="#shipping-info-example" class="">Billing or Shipping Address</a>
+        </div>
+        <div class="col-md-3">
+          <a href="#login-data-example" class="">Login data</a>
+        </div>
+        <div class="col-md-3">
+          <a href="#pii-example" class="">PII for background checks</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="credit-card-example" class="container pt-5 py-lg-5 ">
       <!--Example Capturing credit card data-->
       <h2 class="mt-5 mb-5">Capturing credit card data</h2>
       <div class="row">
-          <div class="col-md-6">
-            <form id="cc-form">
-                <fieldset>
-                  <div id="cc-name" class="form-group">
-                    <label for="cc-name-field">Name on card</label>
-                    <span class="form-control"></span>
-                  </div>
-                  <div id="cc-number" class="form-group">
-                    <label for="cc-number-field">Credit card number</label>
-                    <span class="form-control"></span>
-                  </div>
-                  <div id="cc-cvc" class="form-group">
-                    <label for="cc-cvc-field">CVC</label>
-                    <span class="form-control"></span>
-                  </div>
-                  <div id="cc-expiration-date" class="form-group">
-                    <label for="cc-expiration-date-field">Expiration date</label>
-                    <span class="form-control"></span>
-                  </div>
-                </fieldset>
-                <button type="submit" class="btn btn-info">Submit</button>
-            </form>
+        <div class="col-md-6">
+          <form id="cc-form">
+            <fieldset>
+              <div id="cc-name" class="form-group">
+                <label for="cc-name-field">Name on card</label>
+                <span class="form-control"></span>
+              </div>
+              <div id="cc-number" class="form-group">
+                <label for="cc-number-field">Credit card number</label>
+                <span class="form-control"></span>
+              </div>
+              <div id="cc-cvc" class="form-group">
+                <label for="cc-cvc-field">CVC</label>
+                <span class="form-control"></span>
+              </div>
+              <div id="cc-expiration-date" class="form-group">
+                <label for="cc-expiration-date-field">Expiration date</label>
+                <span class="form-control"></span>
+              </div>
+            </fieldset>
+            <button type="submit" class="btn btn-info">Submit</button>
+          </form>
         </div>
-        <div class="col-md-6">  
-            <pre id="card-preview" class="alert alert-secondary"></pre>
-            <pre id="card-response" class="alert alert-secondary">Responce...</pre> 
-        </div>       
+        <div class="col-md-6">
+          <pre id="card-preview" class="alert alert-secondary"></pre>
+          <pre id="card-response" class="alert alert-secondary">Responce...</pre>
+        </div>
       </div>
     </section>
 
-    <section class="container pt-5 py-lg-5 ">
-      <!--Example Capturing credit card data-->
-      <h2 class="mt-5 mb-5">Shipping Address</h2>
+    <section id="shipping-info-example" class="container pt-5 py-lg-5 ">
+      <!--Example Capturing shipping info along with billing -->
+      <h2 class="mt-5 mb-5">Capturing shipping info along with billing</h2>
       <div class="row">
-          <div class="col-md-6">
-            <form id="cc-form-shipping-info">
-                <fieldset>
+        <div class="col-md-6">
+          <form id="cc-form-shipping-info">
+            <fieldset>
 
-                  <div class="row">
+              <div class="row">
 
-                    <div class="col-sm-6">
-                      <div id="cc-first-name" class="form-group">
-                        <label for="cc-first-name-field">First Name</label>
-                        <span class="form-control"></span>
-                      </div>      
-                    </div>
-
-                    <div class="col-sm-6">
-                      <div id="cc-last-name" class="form-group">
-                        <label for="cc-last-name-field">Last Name</label>
-                        <span class="form-control"></span>
-                      </div>      
-                    </div>
-
+                <div class="col-sm-6">
+                  <div id="cc-first-name" class="form-group">
+                    <label for="cc-first-name-field">First Name</label>
+                    <span class="form-control"></span>
                   </div>
+                </div>
 
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <div id="cc-address" class="form-group">
-                        <label for="cc-address-field">Address</label>
-                        <span class="form-control"></span>
-                      </div>      
-                    </div>
+                <div class="col-sm-6">
+                  <div id="cc-last-name" class="form-group">
+                    <label for="cc-last-name-field">Last Name</label>
+                    <span class="form-control"></span>
                   </div>
+                </div>
 
+              </div>
 
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <div id="cc-country" class="form-group">
-                        <label for="cc-country-field">Country</label>
-                        <span class="form-control"></span>
-                      </div>      
-                    </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="cc-address" class="form-group">
+                    <label for="cc-address-field">Address</label>
+                    <span class="form-control"></span>
                   </div>
-                  
-                  <div class="row">
+                </div>
+              </div>
 
-                    <div class="col-sm-5">
-                      <div id="cc-city" class="form-group">
-                        <label for="cc-city-field">City</label>
-                        <span class="form-control"></span>
-                      </div>      
-                    </div>
-                    
-                    <div class="col-sm-4">
-                      <div id="cc-region" class="form-group">
-                        <label for="cc-region-field">Rregion</label>
-                        <span class="form-control"></span>
-                      </div>      
-                    </div>
 
-                    <div class="col-sm-3">
-                      <div id="cc-zip" class="form-group">
-                        <label for="cc-zip-field">Zip Code</label>
-                        <span class="form-control"></span>
-                      </div>      
-                    </div>
-
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="cc-country" class="form-group">
+                    <label for="cc-country-field">Country</label>
+                    <span class="form-control"></span>
                   </div>
+                </div>
+              </div>
 
-                </fieldset>
-                <button type="submit" class="btn btn-info">Send</button>
-            </form>
+              <div class="row">
+
+                <div class="col-sm-5">
+                  <div id="cc-city" class="form-group">
+                    <label for="cc-city-field">City</label>
+                    <span class="form-control"></span>
+                  </div>
+                </div>
+
+                <div class="col-sm-4">
+                  <div id="cc-region" class="form-group">
+                    <label for="cc-region-field">Rregion</label>
+                    <span class="form-control"></span>
+                  </div>
+                </div>
+
+                <div class="col-sm-3">
+                  <div id="cc-zip" class="form-group">
+                    <label for="cc-zip-field">Zip Code</label>
+                    <span class="form-control"></span>
+                  </div>
+                </div>
+
+              </div>
+
+            </fieldset>
+            <button type="submit" class="btn btn-info">Send</button>
+          </form>
         </div>
-        <div class="col-md-6">  
-            <pre id="shipping-preview" class="alert alert-secondary"></pre>
-            <pre id="shipping-response" class="alert alert-secondary">Responce...</pre> 
-        </div>       
+        <div class="col-md-6">
+          <pre id="shipping-preview" class="alert alert-secondary"></pre>
+          <pre id="shipping-response" class="alert alert-secondary">Responce...</pre>
+        </div>
       </div>
     </section>
 
-    </main>
-  </div>
+    <section id="login-data-example" class="container pt-5 py-lg-5 ">
+      <!--Example Capturing personal (log in) data (username & password/ email & password)-->
+      <h2 class="mt-5 mb-5">Capturing login data: email and password</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <form id="form-login-info">
+            <fieldset>
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <div id="email" class="form-group">
+                    <label for="email-field">Email</label>
+                    <span class="form-control"></span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div id="password" class="form-group">
+                    <label for="password-field">Password</label>
+                    <span class="form-control"></span>
+                  </div>
+                </div>
+              </div>
+
+            </fieldset>
+            <button type="submit" class="btn btn-info">Log in</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <pre id="login-preview" class="alert alert-secondary"></pre>
+          <pre id="login-response" class="alert alert-secondary">Responce...</pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="pii-example" class="container pt-5 py-lg-5 ">
+      <!--Example Capturing data for background checks (driver licenses, social security cards, passports)-->
+      <h2 class="mt-5 mb-5">Capturing data for background checks (driver licenses, social security cards, passports)</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <form id="form-pii-info">
+            <fieldset>
+              <div class="row">
+
+                <div class="col-sm-6">
+                  <div id="pii-first-name" class="form-group">
+                    <label for="pii-first-name-field">First Name</label>
+                    <span class="form-control"></span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div id="pii-last-name" class="form-group">
+                    <label for="pii-last-name-field">Last Name</label>
+                    <span class="form-control"></span>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="ssn" class="form-group">
+                    <label for="email-field">SSN</label>
+                    <span class="form-control"></span>
+                  </div>
+                </div>
+              </div>
+
+            </fieldset>
+            <button type="submit" class="btn btn-info">Search</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <pre id="pii-preview" class="alert alert-secondary"></pre>
+          <pre id="pii-response" class="alert alert-secondary">Responce...</pre>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <script src="js/credit-card-example.js"></script>
-  <script src="js/ shipping-info-example.js"></script>
-
+  <script src="js/shipping-info-example.js"></script>
+  <script src="js/login-data-example.js"></script>
+  <script src="js/pii-example.js"></script>
 </body>
 </html>
