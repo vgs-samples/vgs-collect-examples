@@ -2,7 +2,7 @@
   form {
     max-width: 500px;
   }
-  
+
   .form-control-static iframe,
   .form-control iframe {
     border: 0 none transparent;
@@ -28,4 +28,24 @@
     height: 3.8rem;
     padding: .6rem 1.0rem;
     margin-bottom: 1.5rem;
+  }
+
+  .output-window {
+    position: relative;
+  }
+
+  .window-mark {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 2px 10px;
+    background-color: #17a2b8;
+    color: white;
+    margin: 0;
+    border-radius: 2px;
+    font-size: 10px;
+  }
+
+  .output-window pre {
+    margin-bottom: 0;
   }
