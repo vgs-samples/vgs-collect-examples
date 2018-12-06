@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VGS Collect PII Example</title>
+
+  <!--Include generated js file to your application-->
+  <script src="https://js.verygoodvault.com/js-vgfield-2/development.js"></script>
+
+</head>
+<body>
+<main>
+  <!--Create PII info form-->
+  <form id="form-pii-info">
+    <fieldset>
+      <!--First name-->
+      <label for="pii-first-name">First Name</label>
+      <span id="pii-first-name">
+        <!--VGS Collect iframe for the first name will be here!-->
+      </span>
+
+      <!--Last name-->
+      <label for="pii-last-name">Last Name</label>
+      <span id="pii-last-name">
+        <!--VGS Collect iframe for the last name field will be here!-->
+      </span>
+
+      <!--SSN-->
+      <label for="ssn">SSN</label>
+      <span id="ssn">
+        <!--VGS Collect iframe for SSN field will be here!-->
+      </span>
+    </fieldset>
+    <!--Submit PII form button-->
+    <button type="submit" class="btn btn-info">Search</button>
+  </form>
+</main>
+
+<!--Include script with VGS Collect form initialization-->
+<script src="pii-example.js"></script>
+</body>
+</html>
