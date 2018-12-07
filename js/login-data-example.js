@@ -1,4 +1,4 @@
-const login_form = SecureForm.create('development', function(state) {
+const login_form = SecureForm.create('tntq4dwvhri', function(state) {
   document.getElementById('login-preview').innerText = JSON.stringify(state, null, '  ');
 });
 

@@ -1,4 +1,4 @@
-const f = SecureForm.create('development', function(state) {
+const f = SecureForm.create('tntq4dwvhri', function(state) {
     document.getElementById('card-preview').innerText = JSON.stringify(state, null, '  ');
   });
   
