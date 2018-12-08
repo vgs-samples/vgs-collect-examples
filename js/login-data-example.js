@@ -18,14 +18,12 @@ login_form.field('#password .form-control', {
 document.getElementById('form-login-info')
   .addEventListener('submit', function(e) {
     e.preventDefault();
+    let targetForm = e.target;
     login_form.submit('/post', {
       headers: {
         'x-custom-header': 'Oh yes. I am a custom header',
       },
-      data: {
-        type: 'card',
-      },
     }, function(status, data) {
-      document.getElementById('login-response').innerText = JSON.stringify(data, null, '  ');
+      highlight(targetForm, JSON.stringify(data, null, 4));
     });
   }, false);

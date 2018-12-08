@@ -59,14 +59,12 @@ shipping_form.field('#cc-zip .form-control', {
 document.getElementById('cc-form-shipping-info')
   .addEventListener('submit', function(e) {
     e.preventDefault();
+    let targetForm = e.target;
     shipping_form.submit('/post', {
       headers: {
         'x-custom-header': 'Oh yes. I am a custom header',
       },
-      data: {
-        type: 'card',
-      },
     }, function(status, data) {
-      document.getElementById('shipping-response').innerText = JSON.stringify(data, null, '  ');
+      highlight(targetForm, JSON.stringify(data, null, 4));
     });
   }, false);
