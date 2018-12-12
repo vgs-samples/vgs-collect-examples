@@ -41,16 +41,14 @@ const f = SecureForm.create('tntq4dwvhri', function(state) {
   
   document.getElementById('cc-form')
     .addEventListener('submit', function(e) {
+      let targetForm = e.target;
       e.preventDefault();
       f.submit('/post', {
         headers: {
           'x-custom-header': 'Oh yes. I am a custom header',
         },
-        data: {
-          type: 'card',
-        },
       }, function(status, data) {
-        document.getElementById('card-response').innerText = JSON.stringify(data, null, '  ');
+        highlight(targetForm, JSON.stringify(data, null, 4));
       });
     }, false);
   

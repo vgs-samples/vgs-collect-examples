@@ -34,18 +34,120 @@
     position: relative;
   }
 
-  .window-mark {
+  .info-block {
     position: absolute;
     right: 0;
     top: 0;
+  }
+
+  .output-label {
     padding: 2px 10px;
     background-color: #17a2b8;
     color: white;
     margin: 0;
     border-radius: 2px;
     font-size: 10px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 2em;
+  }
+
+  .state-info-btn {
+    display: inline-block;
+    padding: 0;
+    line-height: 0;
+    font-size: 20px;
+    vertical-align: text-top;
+    margin-right: 10px;
+    color: #333;
   }
 
   .output-window pre {
     margin-bottom: 0;
+  }
+
+  .examples-list-container {
+    margin-bottom: 60px;
+  }
+
+  .mb-20 {
+    margin-bottom: 20px;
+  }
+
+  .mb-30 {
+    margin-bottom: 30px;
+  }
+
+  .data-block {
+    border: 1px solid #d6d6d6;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .response-field {
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    font-size: 12px;
+    margin-bottom: 0;
+    color: black;
+  }
+
+  .highlighted {
+    color: #dc3545;
+  }
+
+  .popover {
+    width: 100%;
+  }
+
+  .popover.bottom {
+    margin-top: 10px;
+  }
+
+  .popover-title {
+    padding: 0 14px;
+    margin: 0;
+    font-size: 14px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ebebeb;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .popover-content {
+    padding: 9px 14px;
+  }
+
+  .popover > .arrow,
+  .popover > .arrow:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+  }
+
+  .popover > .arrow {
+    border-width: 11px;
+  }
+
+  .popover > .arrow:after {
+    content: "";
+    border-width: 10px;
+  }
+
+  .popover.bottom > .arrow {
+    top: -11px;
+    left: 50%;
+    margin-left: -11px;
+    border-top-width: 0;
+    border-bottom-color: #999;
+    border-bottom-color: rgba(0, 0, 0, .25);
+  }
+
+  .popover.bottom > .arrow:after {
+    top: 1px;
+    margin-left: -10px;
+    content: " ";
+    border-top-width: 0;
+    border-bottom-color: #fff;
   }

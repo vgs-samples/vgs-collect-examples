@@ -26,14 +26,12 @@ pii_form.field('#ssn .form-control', {
 document.getElementById('form-pii-info')
   .addEventListener('submit', function(e) {
     e.preventDefault();
-    login_form.submit('/post', {
+    let targetForm = e.target;
+    pii_form.submit('/post', {
       headers: {
         'x-custom-header': 'Oh yes. I am a custom header',
       },
-      data: {
-        type: 'card',
-      },
     }, function(status, data) {
-      document.getElementById('pii-response').innerText = JSON.stringify(data, null, '  ');
+      highlight(targetForm, JSON.stringify(data, null, 4));
     });
   }, false);
