@@ -23,7 +23,7 @@
         <p class="mb-4">VGS Collect is a javascript library that allows you to integrate secure fields with non-secure
           fields in your page.
           <br>The secure fields behave like traditional input fields while preventing access to the unsecured data.</p>
-        <a target="_blank" href="https://www.verygoodsecurity.com/docs/features/secure-form/" class="btn btn-get">
+        <a target="_blank" href="https://www.verygoodsecurity.com/docs/features/vgs-collect" class="btn btn-get">
           Learn more
         </a>
         <!-- <a href="https://www.verygoodsecurity.com/docs/features/secure-form" class="btn btn-get">
@@ -32,7 +32,7 @@
       </div>
     </section>
 
-    <section class="container">
+    <section class="container examples-list-container">
       <div class="row text-center">
         <div class="col-md-3">
           <a href="#credit-card-example" class="">Credit Card</a>
@@ -46,10 +46,11 @@
         <div class="col-md-3">
           <a href="#pii-example" class="">PII for background checks</a>
         </div>
+        </div>
       </div>
     </section>
 
-    <section id="credit-card-example" class="container pt-5 py-lg-5 ">
+    <section id="credit-card-example" class="container pt-5 py-lg-5 example-container">
       <!--Example Capturing credit card data-->
       <h2 class="mt-5 mb-5">Capturing credit card data</h2>
       <div class="row">
@@ -86,23 +87,41 @@
         <div class="col-md-6">
           <p>Submit VGS Collect form with correct values to see an actual response.</p>
           <div class="alert alert-secondary output-window">
-            <span class="window-mark">RESPONSE</span>
-            <pre id="card-response">Response...</pre>
+            <div class="info-block">
+              <span class="output-label">RESPONSE</span>
+            </div>
+            <pre id="card-response" class="response">Response...</pre>
           </div>
           <p>
             Every time you change the input field value, the state of VGS Collect form will change.
             Here you can find an actual state for the current form.
             Try to type something in any field and observe changes here.
           </p>
-          <div class="alert alert-secondary output-window">
-            <span class="window-mark">STATE</span>
-            <pre id="card-preview"></pre>
+          <div class="alert alert-secondary output-window credit-card-form-state">
+            <div class="info-block">
+              <button type="button" class="state-info-btn btn btn-default btn-sm"
+                data-container=".credit-card-form-state"
+                data-toggle="popover"
+                data-placement="bottom"
+                data-html="true"
+                data-trigger="focus"
+                data-content="<p><code>isDirty</code> - checks if you put any changes to the field.</p>
+                              <p><code>isFocused</code> - shows if the field in a focus right now.</p>
+                              <p><code>errorMessages</code> - an array of error messages for a specific field.</p>
+                              <p><code>isValid</code> - shows field validity.</p>
+                              <p><code>name</code> - shows field name.</p>"
+                              title="State information">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+              </button>
+              <span class="output-label">STATE</span>
+            </div>
+              <pre id="card-preview"></pre>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="shipping-info-example" class="container pt-5 py-lg-5 ">
+    <section id="shipping-info-example" class="container pt-5 py-lg-5 example-container">
       <!--Example Capturing shipping info along with billing -->
       <h2 class="mt-5 mb-5">Capturing shipping info along with billing</h2>
       <div class="row">
@@ -143,7 +162,6 @@
                   </div>
                 </div>
               </div>
-
 
               <div class="row">
                 <div class="col-sm-12">
@@ -186,23 +204,41 @@
         <div class="col-md-6">
           <p>Submit VGS Collect form with correct values to see an actual response.</p>
           <div class="alert alert-secondary output-window">
-            <span class="window-mark">RESPONSE</span>
-            <pre id="shipping-response">Response...</pre>
+            <div class="info-block">
+              <span class="output-label">RESPONSE</span>
+            </div>
+            <pre id="shipping-response" class="response">Response...</pre>
           </div>
           <p>
             Every time you change the input field value, the state of VGS Collect form will change.
             Here you can find an actual state for the current form.
             Try to type something in any field and observe changes here.
           </p>
-          <div class="alert alert-secondary output-window">
-            <span class="window-mark">STATE</span>
+          <div class="alert alert-secondary output-window shipping-form-state">
+            <div class="info-block">
+              <button type="button" class="state-info-btn btn btn-default btn-sm"
+                      data-container=".shipping-form-state"
+                      data-toggle="popover"
+                      data-placement="bottom"
+                      data-html="true"
+                      data-trigger="focus"
+                      data-content="<p><code>isDirty</code> - checks if you put any changes to the field.</p>
+                              <p><code>isFocused</code> - shows if the field in a focus right now.</p>
+                              <p><code>errorMessages</code> - an array of error messages for a specific field.</p>
+                              <p><code>isValid</code> - shows field validity.</p>
+                              <p><code>name</code> - shows field name.</p>"
+                      title="State information">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+              </button>
+              <span class="output-label">STATE</span>
+            </div>
             <pre id="shipping-preview"></pre>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="login-data-example" class="container pt-5 py-lg-5 ">
+    <section id="login-data-example" class="container pt-5 py-lg-5 example-container">
       <!--Example Capturing personal (log in) data (username & password/ email & password)-->
       <h2 class="mt-5 mb-5">Capturing login data: email and password</h2>
       <div class="row">
@@ -240,23 +276,41 @@
         <div class="col-md-6">
           <p>Submit VGS Collect form with correct values to see an actual response.</p>
           <div class="alert alert-secondary output-window">
-            <span class="window-mark">RESPONSE</span>
-            <pre id="login-response">Response...</pre>
+            <div class="info-block">
+              <span class="output-label">RESPONSE</span>
+            </div>
+            <pre id="login-response" class="response">Response...</pre>
           </div>
           <p>
             Every time you change the input field value, the state of VGS Collect form will change.
             Here you can find an actual state for the current form.
             Try to type something in any field and observe changes here.
           </p>
-          <div class="alert alert-secondary output-window">
-            <span class="window-mark">STATE</span>
+          <div class="alert alert-secondary output-window login-form-state">
+            <div class="info-block">
+              <button type="button" class="state-info-btn btn btn-default btn-sm"
+                      data-container=".login-form-state"
+                      data-toggle="popover"
+                      data-placement="bottom"
+                      data-html="true"
+                      data-trigger="focus"
+                      data-content="<p><code>isDirty</code> - checks if you put any changes to the field.</p>
+                              <p><code>isFocused</code> - shows if the field in a focus right now.</p>
+                              <p><code>errorMessages</code> - an array of error messages for a specific field.</p>
+                              <p><code>isValid</code> - shows field validity.</p>
+                              <p><code>name</code> - shows field name.</p>"
+                      title="State information">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+              </button>
+              <span class="output-label">STATE</span>
+            </div>
             <pre id="login-preview"></pre>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="pii-example" class="container pt-5 py-lg-5 ">
+    <section id="pii-example" class="container pt-5 py-lg-5 example-container">
       <!--Example Capturing data for background checks (driver licenses, social security cards, passports)-->
       <h2 class="mt-5 mb-5">Capturing data for background checks (driver licenses, social security cards, passports)</h2>
       <div class="row">
@@ -304,22 +358,53 @@
         <div class="col-md-6">
           <p>Submit VGS Collect form with correct values to see an actual response.</p>
           <div class="alert alert-secondary output-window">
-            <span class="window-mark">RESPONSE</span>
-            <pre id="pii-response">Response...</pre>
+            <div class="info-block">
+              <span class="output-label">RESPONSE</span>
+            </div>
+            <pre id="pii-response" class="response">Response...</pre>
           </div>
           <p>
             Every time you change the input field value, the state of VGS Collect form will change.
             Here you can find an actual state for the current form.
             Try to type something in any field and observe changes here.
           </p>
-          <div class="alert alert-secondary output-window">
-            <span class="window-mark">STATE</span>
+          <div class="alert alert-secondary output-window pii-form-state">
+            <div class="info-block">
+              <button type="button" class="state-info-btn btn btn-default btn-sm"
+                      data-container=".pii-form-state"
+                      data-toggle="popover"
+                      data-placement="bottom"
+                      data-html="true"
+                      data-trigger="focus"
+                      data-content="<p><code>isDirty</code> - checks if you put any changes to the field.</p>
+                              <p><code>isFocused</code> - shows if the field in a focus right now.</p>
+                              <p><code>errorMessages</code> - an array of error messages for a specific field.</p>
+                              <p><code>isValid</code> - shows field validity.</p>
+                              <p><code>name</code> - shows field name.</p>"
+                      title="State information">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+              </button>
+              <span class="output-label">STATE</span>
+            </div>
             <pre id="pii-preview"></pre>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <script src="vendor/jquery-3.3.1.min.js"></script>
+  <script src="vendor/bootstrap/bootstrap.min.js"></script>
+  <script>
+    let highlight = function(targetForm, jsonString) {
+      jsonString = jsonString.replace(/(\: )(\"tok_.+\")/g, '$1<span class="highlighted">$2</span>');
+      $(targetForm).closest('.example-container').find('.response').html(jsonString);
+    };
+
+    $(function () {
+      $('[data-toggle="popover"]').popover();
+    });
+  </script>
 
   <script src="js/credit-card-example.js"></script>
   <script src="js/shipping-info-example.js"></script>
