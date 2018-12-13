@@ -1,13 +1,14 @@
 /*  VGS Collect form initialization
-*   SecureForm.create(environment, onUpdateCallback)→ Form
-*     @constructor SecureForm
-*     @param {string} environment - name of one of the domains in the whitelist that this form will submit to
-*     @param {function} onUpdateCallback - callback that will be called whenever the form state changes
-*                                          It receives the state object representing the current state
-*     @returns {object} Form
-* */
+ *   VGSCollect.create(environment, onUpdateCallback) → Form
+ *     @constructor VGSCollect
+ *     @param {string} environment - your `vault id`, that this form will submit to.
+ *                                   https://www.verygoodsecurity.com/docs/terminology/nomenclature#vault
+ *     @param {function} onUpdateCallback - callback that will be called whenever the form state changes
+ *                                          It receives the state object representing the current state
+ *     @returns {object} Form
+ * */
 
-const login_form = SecureForm.create('development', function(state) {
+const login_form = VGSCollect.create('tntgwauwbm1', function(state) {
   /* @returns {object} state - state object represents the current form state */
 });
 

@@ -4,45 +4,46 @@
   <meta charset="UTF-8">
   <title>VGS Collect Credit Card Example</title>
 
-  <!--Include generated js file to your application-->
-  <script src="https://js.verygoodvault.com/js-vgfield-2/development.js"></script>
+  <!--Include generated for your organization JS file into an application.
+      File below is just our example. Please use your own JS file inside your application.-->
+  <script src="path/to/your/personal/VGS-Collect/library/<organization-id>.js"></script>
 
 </head>
 <body>
-  <main>
-    <!--Create credit card form-->
-    <form id="cc-form">
-      <fieldset>
-        <!--Credit card name-->
-        <label for="cc-name">Name on card</label>
-        <span id="cc-name">
-          <!--VGS Collect iframe for card name field will be here!-->
-        </span>
+<main>
+  <!--Create credit card form-->
+  <form id="cc-form">
+    <fieldset>
+      <!--Credit card name-->
+      <label for="cc-name">Name on card</label>
+      <span id="cc-name">
+        <!--VGS Collect iframe for card name field will be here!-->
+      </span>
 
-        <!--Credit card number-->
-        <label for="cc-number">Credit card number</label>
-        <span id="cc-number">
-          <!--VGS Collect iframe for card number field will be here!-->
-        </span>
+      <!--Credit card number-->
+      <label for="cc-number">Credit card number</label>
+      <span id="cc-number">
+        <!--VGS Collect iframe for card number field will be here!-->
+      </span>
 
-        <!--Credit card CVC-->
-        <label for="cc-cvc">CVC</label>
-        <span id="cc-cvc">
-          <!--VGS Collect iframe for CVC field will be here!-->
-        </span>
+      <!--Credit card CVC-->
+      <label for="cc-cvc">CVC</label>
+      <span id="cc-cvc">
+        <!--VGS Collect iframe for CVC field will be here!-->
+      </span>
 
-        <!--Credit card expiration date-->
-        <label for="cc-expiration-date">Expiration date</label>
-        <span id="cc-expiration-date">
-          <!--VGS Collect iframe for expiration date field will be here!-->
-        </span>
-      </fieldset>
-      <!--Submit credit card form button-->
-      <button type="submit">Submit</button>
-    </form>
-  </main>
+      <!--Credit card expiration date-->
+      <label for="cc-expiration-date">Expiration date</label>
+      <span id="cc-expiration-date">
+        <!--VGS Collect iframe for expiration date field will be here!-->
+      </span>
+    </fieldset>
+    <!--Submit credit card form button-->
+    <button type="submit">Submit</button>
+  </form>
+</main>
 
-  <!--Include script with VGS Collect form initialization-->
-  <script src="credit-card-example.js"></script>
+<!--Include script with VGS Collect form initialization-->
+<script src="credit-card-example.js"></script>
 </body>
 </html>
