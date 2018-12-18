@@ -67,18 +67,22 @@
               <div id="cc-name" class="form-group">
                 <label for="cc-name-field">Name on card</label>
                 <span class="form-control"></span>
+                <span class="error-message" data-name="card.name"></span>
               </div>
               <div id="cc-number" class="form-group">
                 <label for="cc-number-field">Credit card number</label>
                 <span class="form-control"></span>
+                <span class="error-message" data-name="card.number"></span>
               </div>
               <div id="cc-cvc" class="form-group">
                 <label for="cc-cvc-field">CVC</label>
                 <span class="form-control"></span>
+                <span class="error-message" data-name="card.cvc"></span>
               </div>
               <div id="cc-expiration-date" class="form-group">
                 <label for="cc-expiration-date-field">Expiration date</label>
                 <span class="form-control"></span>
+                <span class="error-message" data-name="card.expirationDate"></span>
               </div>
             </fieldset>
             <button type="submit" class="btn btn-info">Submit</button>
@@ -90,7 +94,7 @@
             <div class="info-block">
               <span class="output-label">RESPONSE</span>
             </div>
-            <pre id="card-response" class="response">Response...</pre>
+            <pre id="card-response" class="response">Please complete the form and press "submit" to see a response.</pre>
           </div>
           <p>
             Every time you change the input field value, the state of VGS Collect form will change.
@@ -142,6 +146,7 @@
                   <div id="cc-first-name" class="form-group">
                     <label for="cc-first-name-field">First Name</label>
                     <span class="form-control"></span>
+                    <span class="error-message" data-name="shipping.first_name"></span>
                   </div>
                 </div>
 
@@ -149,6 +154,7 @@
                   <div id="cc-last-name" class="form-group">
                     <label for="cc-last-name-field">Last Name</label>
                     <span class="form-control"></span>
+                    <span class="error-message" data-name="shipping.last_name"></span>
                   </div>
                 </div>
 
@@ -159,6 +165,7 @@
                   <div id="cc-address" class="form-group">
                     <label for="cc-address-field">Address</label>
                     <span class="form-control"></span>
+                    <span class="error-message" data-name="shipping.address"></span>
                   </div>
                 </div>
               </div>
@@ -168,6 +175,7 @@
                   <div id="cc-country" class="form-group">
                     <label for="cc-country-field">Country</label>
                     <span class="form-control"></span>
+                    <span class="error-message" data-name="shipping.country"></span>
                   </div>
                 </div>
               </div>
@@ -178,6 +186,7 @@
                   <div id="cc-city" class="form-group">
                     <label for="cc-city-field">City</label>
                     <span class="form-control"></span>
+                    <span class="error-message" data-name="shipping.city"></span>
                   </div>
                 </div>
 
@@ -185,6 +194,7 @@
                   <div id="cc-region" class="form-group">
                     <label for="cc-region-field">Region</label>
                     <span class="form-control"></span>
+                    <span class="error-message" data-name="shipping.region"></span>
                   </div>
                 </div>
 
@@ -192,9 +202,9 @@
                   <div id="cc-zip" class="form-group">
                     <label for="cc-zip-field">Zip Code</label>
                     <span class="form-control"></span>
+                    <span class="error-message" data-name="shipping.zip"></span>
                   </div>
                 </div>
-
               </div>
 
             </fieldset>
@@ -207,7 +217,7 @@
             <div class="info-block">
               <span class="output-label">RESPONSE</span>
             </div>
-            <pre id="shipping-response" class="response">Response...</pre>
+            <pre id="shipping-response" class="response">Please complete the form and press "submit" to see a response.</pre>
           </div>
           <p>
             Every time you change the input field value, the state of VGS Collect form will change.
@@ -258,6 +268,7 @@
                   <div id="email" class="form-group">
                     <label for="email-field">Email</label>
                     <span class="form-control"></span>
+                    <span class="error-message" data-name="login.email"></span>
                   </div>
                 </div>
 
@@ -265,7 +276,8 @@
                   <div id="password" class="form-group">
                     <label for="password-field">Password</label>
                     <span class="form-control"></span>
-                  </div>
+                    <span class="error-message" data-name="login.password"></span>
+                </div>
                 </div>
               </div>
 
@@ -279,7 +291,7 @@
             <div class="info-block">
               <span class="output-label">RESPONSE</span>
             </div>
-            <pre id="login-response" class="response">Response...</pre>
+            <pre id="login-response" class="response">Please complete the form and press "submit" to see a response.</pre>
           </div>
           <p>
             Every time you change the input field value, the state of VGS Collect form will change.
@@ -330,6 +342,7 @@
                   <div id="pii-first-name" class="form-group">
                     <label for="pii-first-name-field">First Name</label>
                     <span class="form-control"></span>
+                    <span class="error-message" data-name="pii.first_name"></span>
                   </div>
                 </div>
 
@@ -337,6 +350,7 @@
                   <div id="pii-last-name" class="form-group">
                     <label for="pii-last-name-field">Last Name</label>
                     <span class="form-control"></span>
+                    <span class="error-message" data-name="pii.last_name"></span>
                   </div>
                 </div>
 
@@ -347,6 +361,7 @@
                   <div id="ssn" class="form-group">
                     <label for="email-field">SSN</label>
                     <span class="form-control"></span>
+                    <span class="error-message" data-name="pii.ssn"></span>
                   </div>
                 </div>
               </div>
@@ -361,7 +376,7 @@
             <div class="info-block">
               <span class="output-label">RESPONSE</span>
             </div>
-            <pre id="pii-response" class="response">Response...</pre>
+            <pre id="pii-response" class="response">Please complete the form and press "submit" to see a response.</pre>
           </div>
           <p>
             Every time you change the input field value, the state of VGS Collect form will change.
@@ -395,17 +410,8 @@
 
   <script src="vendor/jquery-3.3.1.min.js"></script>
   <script src="vendor/bootstrap/bootstrap.min.js"></script>
-  <script>
-    let highlight = function(targetForm, jsonString) {
-      jsonString = jsonString.replace(/(\: )(\"tok_.+\")/g, '$1<span class="highlighted">$2</span>');
-      $(targetForm).closest('.example-container').find('.response').html(jsonString);
-    };
 
-    $(function () {
-      $('[data-toggle="popover"]').popover();
-    });
-  </script>
-
+  <script src="js/script.js"></script>
   <script src="js/credit-card-example.js"></script>
   <script src="js/shipping-info-example.js"></script>
   <script src="js/login-data-example.js"></script>

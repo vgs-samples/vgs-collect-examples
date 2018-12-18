@@ -32,6 +32,9 @@ document.getElementById('form-pii-info')
         'x-custom-header': 'Oh yes. I am a custom header',
       },
     }, function(status, data) {
+      cleanErrorMessages(targetForm);
       highlight(targetForm, JSON.stringify(data, null, 4));
+    }, function(errors) {
+      highlightErrors(targetForm, errors);
     });
   }, false);
