@@ -32,6 +32,7 @@
 
   .output-window {
     position: relative;
+    padding: 25px 20px 22px 20px;
   }
 
   .info-block {
@@ -150,4 +151,15 @@
     content: " ";
     border-top-width: 0;
     border-bottom-color: #fff;
+  }
+
+  .error-message {
+    position: absolute;
+    right: 0;
+    color: #dc3545;
+    font-size: 12px;
+  }
+
+  .example-container .form-group {
+    position: relative;
   }
