@@ -80,7 +80,7 @@
   * */
   form.field('#cc-name', {
     type: 'text',
-    name: 'card.name',
+    name: 'card_name',
     placeholder: 'Joe Business',
     validations: ['required'],
   });
@@ -93,7 +93,7 @@
   * */
   form.field('#cc-number', {
     type: 'card-number',
-    name: 'card.number',
+    name: 'card_number',
     successColor: '#4F8A10',
     errorColor: '#D8000C',
     placeholder: '4111 1111 1111 1111',
@@ -108,7 +108,7 @@
   * */
   form.field('#cc-cvc', {
     type: 'card-security-code',
-    name: 'card.cvc',
+    name: 'card_cvc',
     placeholder: '344',
     validations: ['required', 'validCardSecurityCode'],
   });
@@ -121,7 +121,7 @@
   * */
   form.field('#cc-expiration-date', {
     type: 'card-expiration-date',
-    name: 'card.expirationDate',
+    name: 'card_expirationDate',
     placeholder: '01 / 2016',
     validations: ['required', 'validCardExpirationDate']
   });
