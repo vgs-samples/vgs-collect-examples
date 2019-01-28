@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <title>VGS Collect Login data Example</title>
 
-  <!--Include generated for your organization JS file into an application.
-      File below is just our example. Please use your own JS file inside your application.-->
+  <!--Replace with generated for your organization JS file.-->
   <script src="https://js.verygoodvault.io/vgs-collect/1/<organization-id>.js"></script>
 
   <style>
@@ -27,13 +26,11 @@
   <!--Create Login form-->
   <form id="form-login-info">
     <fieldset>
-      <!--Email-->
       <label for="email">Email</label>
       <span id="email">
         <!--VGS Collect iframe for the email field will be here!-->
       </span>
 
-      <!--Password-->
       <label for="password">Password</label>
       <span id="password">
         <!--VGS Collect iframe for the password field will be here!-->
@@ -46,26 +43,10 @@
 
 <!--Include script with VGS Collect form initialization-->
 <script>
-  /*  VGS Collect form initialization
-  *   VGSCollect.create(environment, onUpdateCallback) → Form
-  *     @constructor VGSCollect
-  *     @param {string} environment - your `vault id`, that this form will submit to.
-  *                                   https://www.verygoodsecurity.com/docs/terminology/nomenclature#vault
-  *     @param {function} onUpdateCallback - callback that will be called whenever the form state changes
-  *                                          It receives the state object representing the current state
-  *     @returns {object} Form
-  * */
+  // VGS Collect form initialization
+  const login_form = VGSCollect.create('<vault-id>', function(state) {});
 
-  const login_form = VGSCollect.create('<vault-id>', function(state) {
-    /* @returns {object} state - state object represents the current form state */
-  });
-
-  /*  Create VGS Collect field for email
-  *   Form#field(selector, properties) → Field
-  *     @param {string} selector - CSS Selector that points to the element where the field will be added
-  *     @param {object} properties - set of configurable options
-  *     @returns {object} Field
-  * */
+  // Create VGS Collect field for email
   login_form.field('#email', {
     type: 'text',
     name: 'login_email',
@@ -73,45 +54,22 @@
     validations: ['required'],
   });
 
-  /*  Create VGS Collect field for password
-  *   Form#field(selector, properties) → Field
-  *     @param {string} selector - CSS Selector that points to the element where the field will be added
-  *     @param {object} properties - set of configurable options
-  *     @returns {object} Field
-  * */
+  // Create VGS Collect field for password
   login_form.field('#password', {
     type: 'password',
     name: 'login_password',
     validations: ['required'],
   });
 
-  /*  Submits all of the form fields by executing a POST request.
-  *   Form#submit(path, options, callback, errorCallback) → Form
-  *     @param {string} path - path that the form will be submitted to
-  *     @param {object} options - options object that can include additional 'serializer', 'data' and request 'headers'
-  *     @param {function} callback - will be executed when the HTTPRequest is finished
-  *     @param {function} errorCallback(optional) - error handling callback
-  * */
+  // Submits all of the form fields by executing a POST request.
   document.getElementById('form-login-info')
     .addEventListener('submit', function(e) {
       e.preventDefault();
-      login_form.submit('/post', {
-        headers: {
-          'x-custom-header': 'Oh yes. I am a custom header',
-        },
-        data: {
-          type: 'login',
-        },
-      }, function(status, data) {
-        /*  @callback
-         *  @param {number} status - status code
-         *  @param {object} data - response data
-         * */
+      login_form.submit('/post', {}, function(status, data) {
+        console.log(data);
       });
     }, function (errors) {
-      /*  @callback errorCallback
-      *   @param {object} errors - returned errors
-      *   */
+      console.log(errors);
     });
 </script>
 </body>
