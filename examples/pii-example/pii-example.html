@@ -49,10 +49,10 @@
 <!--Include script with VGS Collect form initialization-->
 <script>
   // VGS Collect form initialization
-  const pii_form = VGSCollect.create('<vault-id>', function(state) {});
+  const form = VGSCollect.create('<vault-id>', function(state) {});
 
   // Create VGS Collect field for the first name
-  pii_form.field('#pii-first-name', {
+  form.field('#pii-first-name', {
     type: 'text',
     name: 'pii_first_name',
     placeholder: 'Joe',
@@ -60,7 +60,7 @@
   });
 
   // Create VGS Collect field for the last name
-  pii_form.field('#pii-last-name', {
+  form.field('#pii-last-name', {
     type: 'text',
     name: 'pii_last_name',
     placeholder: 'Business',
@@ -68,7 +68,7 @@
   });
 
   // Create VGS Collect field for ssn
-  pii_form.field('#ssn', {
+  form.field('#ssn', {
     type: 'text',
     name: 'pii_ssn',
     placeholder: 'AAA-GG-SSSS',
@@ -79,7 +79,7 @@
   document.getElementById('form-pii-info')
     .addEventListener('submit', function(e) {
       e.preventDefault();
-      pii_form.submit('/post', {}, function(status, data) {
+      form.submit('/post', {}, function(status, data) {
         console.log(data);
       });
     }, function (errors) {

@@ -44,10 +44,10 @@
 <!--Include script with VGS Collect form initialization-->
 <script>
   // VGS Collect form initialization
-  const login_form = VGSCollect.create('<vault-id>', function(state) {});
+  const form = VGSCollect.create('<vault-id>', function(state) {});
 
   // Create VGS Collect field for email
-  login_form.field('#email', {
+  form.field('#email', {
     type: 'text',
     name: 'login_email',
     placeholder: 'test@example.com',
@@ -55,7 +55,7 @@
   });
 
   // Create VGS Collect field for password
-  login_form.field('#password', {
+  form.field('#password', {
     type: 'password',
     name: 'login_password',
     validations: ['required'],
@@ -65,7 +65,7 @@
   document.getElementById('form-login-info')
     .addEventListener('submit', function(e) {
       e.preventDefault();
-      login_form.submit('/post', {}, function(status, data) {
+      form.submit('/post', {}, function(status, data) {
         console.log(data);
       });
     }, function (errors) {

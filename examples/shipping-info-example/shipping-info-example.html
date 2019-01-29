@@ -70,10 +70,10 @@
 <!--Include script with VGS Collect form initialization-->
 <script>
   // VGS Collect form initialization
-  const shipping_form = VGSCollect.create('<vault-id>', function(state) {});
+  const form = VGSCollect.create('<vault-id>', function(state) {});
 
   // Create VGS Collect field for the first name
-  shipping_form.field('#cc-first-name', {
+  form.field('#cc-first-name', {
     type: 'text',
     name: 'shipping_first_name',
     placeholder: 'Joe',
@@ -81,7 +81,7 @@
   });
 
   // Create VGS Collect field for the last name
-  shipping_form.field('#cc-last-name', {
+  form.field('#cc-last-name', {
     type: 'text',
     name: 'shipping_last_name',
     placeholder: 'Business',
@@ -89,7 +89,7 @@
   });
 
   // Create VGS Collect field for an address
-  shipping_form.field('#cc-address', {
+  form.field('#cc-address', {
     type: 'text',
     name: 'shipping_address',
     placeholder: 'Address',
@@ -97,7 +97,7 @@
   });
 
   // Create VGS Collect field for country
-  shipping_form.field('#cc-country', {
+  form.field('#cc-country', {
     type: 'dropdown',
     name: 'shipping_country',
     placeholder: 'Select Country',
@@ -118,7 +118,7 @@
   });
 
   // Create VGS Collect field for the region
-  shipping_form.field('#cc-region', {
+  form.field('#cc-region', {
     type: 'text',
     name: 'shipping_region',
     placeholder: 'Region',
@@ -126,7 +126,7 @@
   });
 
   // Create VGS Collect field for zip code
-  shipping_form.field('#cc-zip', {
+  form.field('#cc-zip', {
     type: 'zip-code',
     name: 'shipping_zip',
     placeholder: 'Zip Code',
@@ -137,7 +137,7 @@
   document.getElementById('cc-form-shipping-info')
     .addEventListener('submit', function(e) {
       e.preventDefault();
-      shipping_form.submit('/post', {}, function(status, data) {
+      form.submit('/post', {}, function(status, data) {
        console.log(data);
       });
     }, function (errors) {
