@@ -8,6 +8,16 @@
   <script src="https://js.verygoodvault.io/vgs-collect/1/<organization-id>.js"></script>
 
   <style>
+    main form,
+    form + div {
+      display: inline-block;
+    }
+
+    form + div {
+      margin-left: 20px;
+      vertical-align: top;
+    }
+
     form span {
       display: block;
       height: 40px;
@@ -39,6 +49,16 @@
     <!--Submit Login form button-->
     <button type="submit">Log in</button>
   </form>
+  <div>
+    <p>1. Go back to the VGS Collect tab on a Dashboard and change the library file to your own.</p>
+    <p>2. Make sure you initialize form using right environment param.</p>
+    <p>3. Proceed to Logs on a Dashboard. Start recording traffic.</p>
+    <p>4. Fill in and submit the form.</p>
+    <p>5. Open Logs, find your POST request and secure fields that you want to be redacted.</p>
+    <p>6. Submit form one more time.</p>
+    <p>7. You will see the result here:</p>
+    <pre id="result"></pre>
+  </div>
 </main>
 
 <!--Include script with VGS Collect form initialization-->
@@ -66,10 +86,10 @@
     .addEventListener('submit', function(e) {
       e.preventDefault();
       form.submit('/post', {}, function(status, data) {
-        console.log(data);
+        document.getElementById('result').innerHTML = JSON.stringify(data.json, null, 4);
       });
     }, function (errors) {
-      console.log(errors);
+      document.getElementById('result').innerHTML = errors;
     });
 </script>
 </body>
