@@ -1,8 +1,8 @@
-const f = SecureForm.create('tntq4dwvhri', function(state) {
+var f = VGSCollect.create('tntq4dwvhri', function(state) {
     document.getElementById('card-preview').innerText = JSON.stringify(state, null, '  ');
   });
   
-const field = f.field('#cc-name .form-control', {
+var field = f.field('#cc-name .form-control', {
   type: 'text',
   name: 'card.name',
   placeholder: 'Joe Business',
@@ -32,12 +32,12 @@ f.field('#cc-expiration-date .form-control', {
   validations: ['required', 'validCardExpirationDate']
 });
 
-document.querySelectorAll('label')
-  .forEach(function(el) {
-    el.addEventListener('click', function(t) {
-      field.focus();
-    });
+var elements = document.querySelectorAll('label');
+for (var i = 0; i < elements.length; i++) {
+  elements[i].addEventListener('click', function(t) {
+    field.focus();
   });
+}
 
 document.getElementById('cc-form')
   .addEventListener('submit', function(e) {
