@@ -159,3 +159,14 @@
   .example-container .form-group {
     position: relative;
   }
+
+  a.open-code-btn {
+    font-size: 14px;
+    width: 170px;
+    line-height: 25px;
+    box-shadow: none;
+  }
+
+  .btn:hover {
+    color: white;
+  }

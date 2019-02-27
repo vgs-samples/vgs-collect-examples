@@ -4,24 +4,20 @@
   <meta charset="UTF-8">
   <title>VGS Collect Credit Card Example</title>
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
   <!--Replace with generated for your organization JS file.-->
   <script type="text/javascript" src="https://js.verygoodvault.io/vgs-collect/1/<organization-id>.js"></script>
 
   <style>
-    main form,
-    form + div {
-      display: inline-block;
-    }
-
-    form + div {
-      margin-left: 20px;
-      vertical-align: top;
+    body {
+      padding: 25px;
     }
 
     span[id*="cc-"] {
       display: block;
       height: 40px;
-      width: 300px;
       margin-bottom: 15px;
     }
 
@@ -29,45 +25,100 @@
       height: 100%;
       width: 100%;
     }
+
+    pre {
+      font-size: 12px;
+    }
+
+    .form-field {
+      display: block;
+      width: 100%;
+      height: calc(2.25rem + 2px);
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+      transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+
+    .form-field iframe {
+      border: 0 none transparent;
+      height: 100%;
+      vertical-align: middle;
+      width: 100%;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 <body>
 <main>
-  <!--Create credit card form-->
-  <form id="cc-form">
-    <fieldset>
-      <label for="cc-name">Name on card</label>
-      <span id="cc-name">
-        <!--VGS Collect iframe for card name field will be here!-->
-      </span>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+      <div class="row card card-outline-secondary">
+        <div class="card-body">
+          <h3 class="text-center">Credit Card Payment</h3>
+          <hr>
+          <div class="alert alert-info p-2">
+            Please fill in and submit a form to see redacted data in response window.
+          </div>
+          <form id="cc-form">
+            <div class="form-group">
+              <label for="cc-name">Name</label>
+              <span id="cc-name" class="form-field">
+                <!--VGS Collect iframe for card name field will be here!-->
+              </span>
+            </div>
+            <div class="form-group">
+              <label for="cc-number">Card number</label>
+              <span id="cc-number" class="form-field">
+                <!--VGS Collect iframe for card number field will be here!-->
+              </span>
+            </div>
+            <div class="form-group">
+              <label for="cc-cvc">CVC</label>
+              <span id="cc-cvc" class="form-field">
+              <!--VGS Collect iframe for CVC field will be here!-->
+              </span>
+            </div>
+            <div class="form-group">
+              <label for="cc-expiration-date">Expiration date</label>
+              <span id="cc-expiration-date" class="form-field">
+              <!--VGS Collect iframe for expiration date field will be here!-->
+              </span>
+            </div>
 
-      <label for="cc-number">Credit card number</label>
-      <span id="cc-number">
-        <!--VGS Collect iframe for card number field will be here!-->
-      </span>
-
-      <label for="cc-cvc">CVC</label>
-      <span id="cc-cvc">
-        <!--VGS Collect iframe for CVC field will be here!-->
-      </span>
-
-      <label for="cc-expiration-date">Expiration date</label>
-      <span id="cc-expiration-date">
-        <!--VGS Collect iframe for expiration date field will be here!-->
-      </span>
-    </fieldset>
-    <!--Submit credit card form button-->
-    <button type="submit">Submit</button>
-  </form>
-  <div>
-    <p>1. Go back to the VGS Collect tab on a Dashboard and change the library file to your own.</p>
-    <p>2. Make sure you initialize form using right environment param.</p>
-    <p>3. Proceed to Logs on a Dashboard. Start recording traffic.</p>
-    <p>4. Fill in and submit the form.</p>
-    <p>5. Open Logs, find your POST request and secure fields that you want to be redacted.</p>
-    <p>6. Submit form one more time.</p>
-    <p>7. You will see the result here:</p>
-    <pre id="result"></pre>
+            <!--Submit credit card form button-->
+            <button type="submit" class="btn btn-success btn-block">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="alert alert-secondary">
+        <h5 class="text-center">Instruction</h5>
+        <p>1. Go back to the VGS Collect tab on a Dashboard and change the library file to your own.</p>
+        <p>2. Make sure you initialize form using right environment param.</p>
+        <p>3. Create an inbound route, proceed to Logs on a Dashboard and start recording traffic.</p>
+        <p>4. Fill in and submit the form.</p>
+        <p>5. Open Logs, find your POST request and secure fields that you want to be redacted.</p>
+        <p>6. Submit form one more time.</p>
+      </div>
+      <div class="alert alert-warning">
+        <h5 class="text-center">Response</h5>
+        <p>For this example we secured <b>card number</b> and <b>cvc code</b> fields.</p>
+        <pre id="result">
+          Submit a form to see result.
+        </pre>
+      </div>
+    </div>
   </div>
 </main>
 
