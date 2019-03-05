@@ -13,7 +13,7 @@ var field = f.field('#cc-name .form-control', {
   placeholder: 'Joe Business',
   validations: ['required'],
 });
-$("#qwe").click(function() {
+$("#qwe").on("touchstart click", function() {
   field.focus();
 })
 f.field('#cc-number .form-control', {
