@@ -16,6 +16,7 @@ var field = f.field('#cc-name .form-control', {
 console.log('qweqweqwe', $)
 $(document).on("touchstart click", '#qwe', function() {
   console.log('qweqwe')
+  event.preventDefault();
   field.focus();
 })
 
