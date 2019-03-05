@@ -1,4 +1,4 @@
-const login_form = SecureForm.create('tntq4dwvhri', function(state) {
+var login_form = VGSCollect.create('tntq4dwvhri', function(state) {
   document.getElementById('login-preview').innerText = JSON.stringify(state, null, '  ');
 });
 
