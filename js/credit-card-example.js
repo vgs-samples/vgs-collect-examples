@@ -13,9 +13,12 @@ var field = f.field('#cc-name .form-control', {
   placeholder: 'Joe Business',
   validations: ['required'],
 });
-$("#qwe").on("touchstart click", function() {
+console.log('qweqweqwe', $)
+$(document).on("touchstart click", '#qwe', function() {
+  console.log('qweqwe')
   field.focus();
 })
+
 f.field('#cc-number .form-control', {
   type: 'card-number',
   name: 'card.number',
