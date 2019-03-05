@@ -1,14 +1,21 @@
 var f = VGSCollect.create('tntq4dwvhri', function(state) {
     document.getElementById('card-preview').innerText = JSON.stringify(state, null, '  ');
   });
+
+  $('.form-control iframe').click(function(event) {
+  console.log('event', event.target)
+})
   
+
 var field = f.field('#cc-name .form-control', {
   type: 'text',
   name: 'card.name',
   placeholder: 'Joe Business',
   validations: ['required'],
 });
-
+$("#qwe").click(function() {
+  field.focus();
+})
 f.field('#cc-number .form-control', {
   type: 'card-number',
   name: 'card.number',
@@ -32,12 +39,12 @@ f.field('#cc-expiration-date .form-control', {
   validations: ['required', 'validCardExpirationDate']
 });
 
-var elements = document.querySelectorAll('label');
-for (var i = 0; i < elements.length; i++) {
-  elements[i].addEventListener('click', function(t) {
-    field.focus();
-  });
-}
+// var elements = document.querySelectorAll('label');
+// for (var i = 0; i < elements.length; i++) {
+//   elements[i].addEventListener('click', function(t) {
+//     field.focus();
+//   });
+// }
 
 document.getElementById('cc-form')
   .addEventListener('submit', function(e) {
