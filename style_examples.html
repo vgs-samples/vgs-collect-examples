@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="https://www.verygoodsecurity.com/theme/css/main.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <script src="https://js.verygoodvault.com/vgs-collect/1/vgs-collect-examples.js"></script>
+</head>
+
+<body>
+<main>
+  <section class="container pt-5 py-lg-5 pb-5">
+    <div class="text-center ">
+      <h1 class="mb-2">VGS Collect Style Examples</h1>
+      <p class="mb-4">VGS Collect is a javascript library that allows you to integrate secure fields with non-secure
+        fields in your page.
+        <br>The secure fields behave like traditional input fields while preventing access to the unsecured data.</p>
+      <a target="_blank" href="https://www.verygoodsecurity.com/docs/features/vgs-collect" class="btn btn-get mr-3">
+        Documentation
+      </a>
+      <a target="_blank" href="./index.html" class="btn btn-get">
+        Examples
+      </a>
+    </div>
+  </section>
+
+  <section id="credit-card-example" class="container pt-lg-5 example-container">
+    <div class="row">
+      <div class="col-md-6">
+        <a
+          href="https://codesandbox.io/s/23k49480oj?fontsize=14&module=%2Fscript.js"
+          target="_blank"
+          class="source-link">
+          <i class="fas fa-code"></i>
+          Open Codesandbox example
+        </a>
+        <div class="card-success request-success hidden">
+          <i class="fa fa-check"></i>
+          <p>Payment Successful!</p>
+        </div>
+        <div class="form-container">
+          <div class="card-front">
+            <div class="shadow"></div>
+            <div class="image-container">
+              <span class="amount">PAYING: <strong>$1</strong></span>
+              <span class="card-image">
+            <i class="far fa-credit-card"></i>
+          </span>
+            </div>
+            <form id="cc-form">
+              <div id="cc-number" class="card-number-container">
+                <label for="cc-number">
+                  Card Number
+                </label>
+                <span class="field-space"></span>
+              </div>
+
+              <div id="cc-holder" class="cardholder-container">
+                <label for="cc-holder">Card Holder</label>
+                <span class="field-space"></span>
+              </div>
+
+              <div id="cc-exp" class="exp-container">
+                <label for="cc-exp">
+                  Expiration
+                </label>
+                <span class="field-space"></span>
+              </div>
+              <div id="cc-cvc" class="cvc-container">
+                <label for="cc-cvc"> CVC/CVV</label>
+                <span class="field-space"></span>
+                <p>Last 3 or 4 digits</p>
+              </div>
+            </form>
+          </div>
+          <div class="card-back">
+            <div class="card-stripe">
+            </div>
+          </div>
+          <button type="submit" class="card-btn" id="cc-form-submit">Submit</button>
+        </div>
+      </div>
+      <div class="col-md-6 styles-code-example">
+      <pre><code class="javascript">
+        const field = form.field('#space-for-field', {
+          type: 'card-number',
+          name: 'card.expirationDate',
+          placeholder: '4111111111111111',
+          css: {
+            backgroundColor: '#ccc',
+            color: '#333',
+            fontSize: '20px',
+            boxSizing: 'border-box',
+            borderRadius: '15px',
+            padding: '0 10px',
+            '&:hover': {
+              backgroundColor: 'green',
+            },
+            '&:focus': {
+              backgroundColor: 'black',
+            },
+            '&::placeholder': {
+              color: 'rebeccapurple',
+              fontSize: '14px',
+            },
+          }
+        });
+      </code>
+      </pre>
+      </div>
+    </div>
+  </section>
+
+  <section id="login-data-example" class="container py-lg-5 example-container mb-5">
+    <h4 class="center-block mb-4">Field styling examples</h4>
+
+    <!--Login Form-->
+    <div class="field-examples">
+      <a href="https://codesandbox.io/s/z65vox578m?fontsize=14&module=%2Fscript.js"
+         target="_blank"
+         class="source-link">
+        <i class="fas fa-code"></i>
+        Open Codesandbox example
+      </a>
+
+      <div class="login-success request-success hidden">
+        <i class="fa fa-check"></i>
+        <p>Login Successful!</p>
+      </div>
+
+      <form class="login-form-example mb-5" id="login-form">
+        <div class="field-example mb-5" id="login">
+          <label for="login" class="hidden">Login</label>
+          <span class="field-space"></span>
+        </div>
+        <div class="field-example mb-5" id="password">
+          <label for="password" class="hidden">Password</label>
+          <span class="field-space"></span>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+      <!--End Login Form-->
+
+
+      <!--Shipping Form-->
+      <a href="https://codesandbox.io/s/5v2vpqp39p?fontsize=14&module=%2Fscript.js"
+         target="_blank"
+         class="source-link">
+        <i class="fas fa-code"></i>
+        Open Codesandbox example
+      </a>
+
+      <div class="shipping-success request-success hidden">
+        <i class="fa fa-check"></i>
+        <p>Successful!</p>
+      </div>
+
+      <form class="shipping-form-example mb-5" id="shipping-form">
+        <div class="field-example example-3 mb-2" id="full-name">
+          <label for="full-name">Full name</label>
+          <span class="field-space"></span>
+        </div>
+        <div class="field-example mb-2" id="address">
+          <label for="address">Address</label>
+          <span class="field-space"></span>
+        </div>
+        <div class="field-example mb-4" id="zip-code">
+          <label for="zip-code">Zip Code</label>
+          <span class="field-space"></span>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+      <!--End Shipping Form-->
+
+      <!--PII Form-->
+      <a href="https://codesandbox.io/s/7m576jk5nj?fontsize=14&module=%2Fscript.js"
+         target="_blank"
+         class="source-link">
+        <i class="fas fa-code"></i>
+        Open Codesandbox example
+      </a>
+
+      <div class="pii-success request-success hidden">
+        <i class="fa fa-check"></i>
+        <p>Successful!</p>
+      </div>
+
+      <form class="pii-form-example" id="pii-form">
+        <div class="field-example mb-4" id="first-name">
+          <label for="first-name">Name</label>
+          <span class="field-space"></span>
+        </div>
+        <div class="field-example mb-4" id="ssn">
+          <label for="ssn">SSN</label>
+          <span class="field-space"></span>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+      <!--End PII Form-->
+    </div>
+  </section>
+</main>
+
+<script src="vendor/jquery-3.3.1.min.js"></script>
+<script src="vendor/bootstrap/bootstrap.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="js/script.js"></script>
+<script src="styles_examples/credit-card-custom.js"></script>
+<script src="styles_examples/login-form-custom.js"></script>
+<script src="styles_examples/shipping-form-custom.js"></script>
+<script src="styles_examples/pii-form-custom.js"></script>
+</body>
+</html>
