@@ -1,52 +1,39 @@
-var f = VGSCollect.create('tntq4dwvhri', function(state) {});
+var payment_form = VGSCollect.create('tntq4dwvhri', function(state) {});
 var requestError = $(".request-error");
 var requestSuccess = $(".request-success");
 var styles = {
-  border: 'none',
-  background: 'rgba(215, 224, 235, 0.18);',
-  height: '40px',
-  lineHeight: 'normal',
-  padding: '0 10px',
-  color: 'white',
-  fontSize: '12px',
+  background: '#FFFFFF',
+  border: '1px solid #CED7E6',
   boxSizing: 'border-box',
   borderRadius: '4px',
-  letterSpacing: '.7px',
-  '&::placeholder': {
-    color: 'white',
-    fontSize: '12px',
-    opacity: '.5',
-  },
+  height: '40px',
+  padding: '0 16px',
 };
 
-f.field('#cc-holder .field-space', {
+payment_form.field('#payment-cc-holder .field-space', {
   type: 'text',
   name: 'card.name',
-  placeholder: 'Joe Business',
   validations: ['required'],
   css: styles,
 });
 
-f.field('#cc-number .field-space', {
+payment_form.field('#payment-cc-number .field-space', {
   type: 'card-number',
   name: 'card.number',
-  placeholder: 'Card number',
   validations: ['required', 'validCardNumber'],
   css: styles,
 });
 
-f.field('#cc-cvc .field-space', {
+payment_form.field('#payment-cc-cvc .field-space', {
   type: 'card-security-code',
   name: 'card.cvc',
-  placeholder: '344',
   validations: ['required', 'validCardSecurityCode'],
   css: styles,
 });
 
-f.field('#cc-exp .field-space', {
+payment_form.field('#payment-cc-exp .field-space', {
   type: 'card-expiration-date',
   name: 'card.expirationDate',
-  placeholder: '01 / 2016',
   validations: ['required', 'validCardExpirationDate'],
   css: styles,
 });
@@ -60,10 +47,10 @@ function showAlert(elem) {
   });
 }
 
-document.getElementById('cc-form-submit')
+document.getElementById('payment-form-submit')
   .addEventListener('click', function(e) {
     e.preventDefault();
-    f.submit('/post', {
+    payment_form.submit('/post', {
       headers: {
         'x-custom-header': 'Oh yes. I am a custom header',
       },

@@ -1,31 +1,51 @@
-var pii_form = VGSCollect.create('tntq4dwvhri', function(state) {});
+var signup_form = VGSCollect.create('tntq4dwvhri', function(state) {});
 var requestError = $(".request-error");
 var requestSuccess = $(".request-success");
 var styles = {
-  border: 'none',
+  background: '#C0B1DE',
+  borderRadius: '128px',
+  width: '100%',
+  height: '40px',
+  color: '#563A92',
+  fontSize: '16px',
+  padding: '0 16px',
   boxSizing: 'border-box',
-  padding: '0 15px',
-  fontSize: '14px',
   '&::placeholder': {
-    fontWeight: '100',
-    color: '#BABDB5',
-    fontSize: '14px',
+    fontSize: '16px',
+    color: '#563A92',
+    opacity: '0.6',
   }
 };
 
-pii_form.field('#pii-first-name .field-space', {
+signup_form.field('#signup-email .field-space', {
   type: 'text',
-  name: 'first.name',
+  name: 'signup.email',
   validations: ['required'],
-  placeholder: 'Full name',
+  placeholder: 'Email or phone',
   css: styles,
 });
 
-pii_form.field('#pii-ssn .field-space', {
-  type: 'text',
-  name: 'ssn',
+signup_form.field('#signup-password .field-space', {
+  type: 'password',
+  name: 'signup.password',
   validations: ['required'],
-  placeholder: 'XX-XXX-XXXX',
+  placeholder: 'Password',
+  css: styles,
+});
+
+signup_form.field('#signup-name .field-space', {
+  type: 'text',
+  name: 'signup.name',
+  validations: ['required'],
+  placeholder: 'Name',
+  css: styles,
+});
+
+signup_form.field('#signup-birthday .field-space', {
+  type: 'text',
+  name: 'signup.name',
+  validations: ['required'],
+  placeholder: 'Birthday',
   css: styles,
 });
 
@@ -38,15 +58,15 @@ function showAlert(elem) {
   });
 }
 
-document.getElementById('pii-form')
+document.getElementById('signup-form')
   .addEventListener('submit', function(e) {
     e.preventDefault();
-    pii_form.submit('/post', {
+    signup_form.submit('/post', {
       headers: {
         'x-custom-header': 'Oh yes. I am a custom header',
       },
     }, function(status, data) {
-      showAlert(requestSuccess);
+      showAlert(requestSuccess)
     }, function(errors) {
       for(var error in errors) {
         var errorMessage = errors[error].errorMessages[0];
