@@ -21,7 +21,10 @@ payment_form.field('#payment-cc-number .field-space', {
   type: 'card-number',
   name: 'card.number',
   validations: ['required', 'validCardNumber'],
-  css: styles,
+  showCardIcon: {
+    right: '10px',
+  },
+  css: Object.assign(styles, {paddingRight: '45px'}),
 });
 
 payment_form.field('#payment-cc-cvc .field-space', {
