@@ -10,7 +10,7 @@ Once the fields are initialized the library communicates the state of the fields
 
 ## Explore VGS Collect documentation
 
-You can find more useful information about VGS Collect API in our [docs](https://www.verygoodsecurity.com/docs/features/vgs-collect).
+You can find more useful information about VGS Collect API in our [docs](https://www.verygoodsecurity.com/docs/vgs-collect/what-is-it).
 
 ## VGS Collect use cases examples
 
