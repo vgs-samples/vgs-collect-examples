@@ -21,7 +21,7 @@ var styles = {
 
 f.field('#cc-holder .field-space', {
   type: 'text',
-  name: 'card.name',
+  name: 'cardName',
   placeholder: 'Joe Business',
   validations: ['required'],
   css: styles,
@@ -29,7 +29,7 @@ f.field('#cc-holder .field-space', {
 
 f.field('#cc-number .field-space', {
   type: 'card-number',
-  name: 'card.number',
+  name: 'cardNumber',
   placeholder: 'Card number',
   validations: ['required', 'validCardNumber'],
   css: styles,
@@ -37,7 +37,7 @@ f.field('#cc-number .field-space', {
 
 f.field('#cc-cvc .field-space', {
   type: 'card-security-code',
-  name: 'card.cvc',
+  name: 'cardCvc',
   placeholder: '344',
   validations: ['required', 'validCardSecurityCode'],
   css: styles,
@@ -45,7 +45,7 @@ f.field('#cc-cvc .field-space', {
 
 f.field('#cc-exp .field-space', {
   type: 'card-expiration-date',
-  name: 'card.expirationDate',
+  name: 'cardExpirationDate',
   placeholder: '01 / 2016',
   validations: ['required', 'validCardExpirationDate'],
   css: styles,

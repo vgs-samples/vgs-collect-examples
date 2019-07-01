@@ -15,7 +15,7 @@ var styles = {
 
 pii_form.field('#pii-first-name .field-space', {
   type: 'text',
-  name: 'first.name',
+  name: 'firstName',
   validations: ['required'],
   placeholder: 'Full name',
   css: styles,
@@ -23,7 +23,7 @@ pii_form.field('#pii-first-name .field-space', {
 
 pii_form.field('#pii-ssn .field-space', {
   type: 'text',
-  name: 'ssn',
+  name: 'piiSsn',
   validations: ['required'],
   placeholder: 'XX-XXX-XXXX',
   css: styles,

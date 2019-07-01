@@ -4,21 +4,21 @@ var pii_form = VGSCollect.create('tntq4dwvhri', function(state) {
 
 pii_form.field('#pii-first-name .form-control', {
   type: 'text',
-  name: 'pii.first_name',
+  name: 'piiFirstName',
   placeholder: 'Joe',
   validations: ['required'],
 });
 
 pii_form.field('#pii-last-name .form-control', {
   type: 'text',
-  name: 'pii.last_name',
+  name: 'piiLastName',
   placeholder: 'Business',
   validations: ['required'],
 });
 
 pii_form.field('#ssn .form-control', {
   type: 'text',
-  name: 'pii.ssn',
+  name: 'piiSsn',
   placeholder: 'AAA-GG-SSSS',
   validations: ['required'],
 });

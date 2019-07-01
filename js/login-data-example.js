@@ -4,14 +4,14 @@ var login_form = VGSCollect.create('tntq4dwvhri', function(state) {
 
 login_form.field('#email .form-control', {
   type: 'text',
-  name: 'login.email',
+  name: 'loginEmail',
   placeholder: 'test@example.com',
   validations: ['required'],
 });
 
 login_form.field('#password .form-control', {
   type: 'password',
-  name: 'login.password',
+  name: 'loginPassword',
   validations: ['required'],
 });
 
