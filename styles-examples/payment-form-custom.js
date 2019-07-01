@@ -12,14 +12,14 @@ var styles = {
 
 payment_form.field('#payment-cc-holder .field-space', {
   type: 'text',
-  name: 'card.name',
+  name: 'cardName',
   validations: ['required'],
   css: styles,
 });
 
 payment_form.field('#payment-cc-number .field-space', {
   type: 'card-number',
-  name: 'card.number',
+  name: 'cardNumber',
   validations: ['required', 'validCardNumber'],
   showCardIcon: {
     right: '10px',
@@ -29,14 +29,14 @@ payment_form.field('#payment-cc-number .field-space', {
 
 payment_form.field('#payment-cc-cvc .field-space', {
   type: 'card-security-code',
-  name: 'card.cvc',
+  name: 'cardCvc',
   validations: ['required', 'validCardSecurityCode'],
   css: styles,
 });
 
 payment_form.field('#payment-cc-exp .field-space', {
   type: 'card-expiration-date',
-  name: 'card.expirationDate',
+  name: 'cardExpirationDate',
   validations: ['required', 'validCardExpirationDate'],
   css: styles,
 });

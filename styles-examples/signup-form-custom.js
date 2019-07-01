@@ -19,7 +19,7 @@ var styles = {
 
 signup_form.field('#signup-email .field-space', {
   type: 'text',
-  name: 'signup.email',
+  name: 'signupEmail',
   validations: ['required'],
   placeholder: 'Email or phone',
   css: styles,
@@ -27,7 +27,7 @@ signup_form.field('#signup-email .field-space', {
 
 signup_form.field('#signup-password .field-space', {
   type: 'password',
-  name: 'signup.password',
+  name: 'signupPassword',
   validations: ['required'],
   placeholder: 'Password',
   css: styles,
@@ -35,7 +35,7 @@ signup_form.field('#signup-password .field-space', {
 
 signup_form.field('#signup-name .field-space', {
   type: 'text',
-  name: 'signup.name',
+  name: 'signupName',
   validations: ['required'],
   placeholder: 'Name',
   css: styles,
@@ -43,7 +43,7 @@ signup_form.field('#signup-name .field-space', {
 
 signup_form.field('#signup-birthday .field-space', {
   type: 'text',
-  name: 'signup.name',
+  name: 'signupName',
   validations: ['required'],
   placeholder: 'Birthday',
   css: styles,

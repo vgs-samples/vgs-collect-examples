@@ -4,28 +4,28 @@ var shipping_form = VGSCollect.create('tntq4dwvhri', function(state) {
 
 shipping_form.field('#cc-first-name .form-control', {
   type: 'text',
-  name: 'shipping.first_name',
+  name: 'shippingFirstName',
   placeholder: 'Joe',
   validations: ['required'],
 });
 
 shipping_form.field('#cc-last-name .form-control', {
   type: 'text',
-  name: 'shipping.last_name',
+  name: 'shippingLastName',
   placeholder: 'Business',
   validations: ['required'],
 });
 
 shipping_form.field('#cc-address .form-control', {
   type: 'text',
-  name: 'shipping.address',
+  name: 'shippingAddress',
   placeholder: 'Address',
   validations: ['required'],
 });
 
 shipping_form.field('#cc-country .form-control', {
   type: 'dropdown',
-  name: 'shipping.country',
+  name: 'shippingCountry',
   placeholder: 'Select Country',
   validations: ['required'],
   options: [
@@ -37,21 +37,21 @@ shipping_form.field('#cc-country .form-control', {
 
 shipping_form.field('#cc-city .form-control', {
   type: 'text',
-  name: 'shipping.city',
+  name: 'shippingCity',
   placeholder: 'City',
   validations: ['required'],
 });
 
 shipping_form.field('#cc-region .form-control', {
   type: 'text',
-  name: 'shipping.region',
+  name: 'shippingRegion',
   placeholder: 'Region',
   validations: ['required'],
 });
 
 shipping_form.field('#cc-zip .form-control', {
   type: 'zip-code',
-  name: 'shipping.zip',
+  name: 'shippingZip',
   placeholder: 'Zip Code',
   validations: ['required'],
 });
