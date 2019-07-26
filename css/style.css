@@ -199,6 +199,7 @@
 
   .btn-outline-primary {
     color: #3B495C;
+    box-shadow: 0 10px 15px rgba(0,0,0,.15);
     background-color: transparent;
     background-image: none;
     border-color: #3B495C;
@@ -618,6 +619,54 @@
     width: 30%;
   }
 
+  .masked-inputs-form {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .masked-inputs-form .field-space {
+    height: 50px;
+    padding: 9px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #eff4ff8c;
+    box-shadow: 0 1px 3px 0 #b1bdcd;
+    width: 500px;
+    max-width: 500px;
+  }
+
+  .masked-inputs-form label {
+    font-family: 'Helvetica Neue', 'sans-serif';
+    font-weight: 200;
+    font-size: 16px;
+    color: #576f7f;
+  }
+
+  .masked-inputs-form pre {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 14px;
+    width: 45%;
+  }
+
+  .masked-inputs-form .copy-btn {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    border-radius: 4px;
+    background: none;
+    padding: 0 9px;
+    font-size: 10px;
+  }
+
+  .masked-inputs-form .inner-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   footer {
     color: white;
     background: #3c4b5e;
@@ -663,4 +712,23 @@
     .pii-form-example .btn {
       width: 100%;
     }
+  }
+
+
+  @media (max-width: 995px) {
+    .masked-inputs-form .inner-container {
+      flex-direction: column;
+    }
+
+    .masked-inputs-form pre {
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+
+    .masked-inputs-form .field-space {
+      width: 100%;
+      max-width: 100%;
+    }
+
   }
