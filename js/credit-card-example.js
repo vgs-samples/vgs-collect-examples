@@ -28,7 +28,7 @@ f.field('#cc-cvc .form-control', {
 f.field('#cc-expiration-date .form-control', {
   type: 'card-expiration-date',
   name: 'cardExpirationDate',
-  placeholder: '01 / 2016',
+  placeholder: '01 / 2022',
   validations: ['required', 'validCardExpirationDate']
 });
 
