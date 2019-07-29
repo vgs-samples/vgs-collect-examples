@@ -46,7 +46,7 @@ f.field('#cc-cvc .field-space', {
 f.field('#cc-exp .field-space', {
   type: 'card-expiration-date',
   name: 'cardExpirationDate',
-  placeholder: '01 / 2016',
+  placeholder: '01 / 2022',
   validations: ['required', 'validCardExpirationDate'],
   css: styles,
 });
