@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="https://www.verygoodsecurity.com/theme/css/main.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/color-brewer.min.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <script src="https://js.verygoodvault.io/vgs-collect/1/vgs-collect-examples.js"></script>
+</head>
+
+<body>
+<main>
+
+  <div class="alert alert-success alert-dismissible hidden show fade copy-success" role="alert">
+    <strong>Copied to clipboard!</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <section class="container pt-5 pb-5">
+    <div class="text-center ">
+      <h4 class="mb-5">VGS COLLECT.JS MASKED INPUT EXAMPLES</h4>
+      <p class="mb-4">VGS Collect.js is a javascript library that allows you to integrate secure fields with non-secure
+        fields in your page.
+        <br>The secure fields behave like traditional input fields while preventing access to the unsecured data.</p>
+      <a target="_blank" href="https://www.verygoodsecurity.com/docs/vgs-collect/what-is-it" class="btn btn-outline-primary mr-3">
+        Documentation
+      </a>
+      <a target="_blank" href="./style-examples.html" class="btn btn-outline-primary mr-3">
+        Style Examples
+      </a>
+      <a target="_blank" href="./masked-examples.html" class="btn btn-get">
+        Input masking
+      </a>
+    </div>
+  </section>
+
+  <section class="container">
+
+    <a href="https://codesandbox.io/s/static-o8njh?fontsize=14&module=%2Fscript.js"
+       target="_blank"
+       class="source-link">
+      <i class="fas fa-code"></i>
+      Codesandbox playground
+    </a>
+
+    <form id="masked-inputs-form" class="masked-inputs-form">
+      <div id="cc-holder" class="inner-container">
+        <div class="mb-5">
+          <label for="cc-holder" class="flex justify-content-between">
+            Card Holder <b>Alphabetic only</b>
+          </label>
+          <span class="field-space"></span>
+        </div>
+        <pre>
+          <code class="javascript">f.field('#cc-holder', {...})
+            .replacePattern('/[^a-zA-Z\s]+/g');
+          </code>
+        </pre>
+      </div>
+      <div id="zip-code" class="inner-container">
+        <div class="mb-5">
+          <label for="zip-code" class="flex justify-content-between">
+            Zip code <b>Numeric only</b>
+          </label>
+          <span class="field-space"></span>
+        </div>
+        <pre>
+          <code class="javascript">f.field('#zip-code', {...})
+            .replacePattern('/[^\\d]+/g');
+          </code>
+        </pre>
+      </div>
+      <div id="phone-number" class="inner-container">
+        <div class="mb-5">
+          <label for="phone-number" class="flex justify-content-between">
+            Phone number <b>+1 (XXX) XXX-XX-XX</b>
+          </label>
+          <span class="field-space"></span>
+        </div>
+        <pre>
+          <code class="javascript">f.field('#phone-number', {...})
+            .mask('+1 (999) 999-99-99');
+          </code>
+        </pre>
+      </div>
+      <div id="ssn" class="inner-container">
+        <div class="mb-5">
+          <label for="ssn" class="flex justify-content-between">
+            SSN <b>XXX-XX-XXXX</b>
+          </label>
+          <span class="field-space"></span>
+        </div>
+        <pre>
+          <code class="javascript">f.field('#ssn', {...})
+            .mask('999-99-9999', '*');
+          </code>
+        </pre>
+      </div>
+      <div id="birth-date" class="inner-container">
+        <div class="mb-5">
+          <label for="birth-date" class="flex justify-content-between">
+            Birth date <b>(MM/DD/YYYY)</b>
+          </label>
+          <span class="field-space"></span>
+        </div>
+        <pre>
+          <code class="javascript">f.field('#password', {...})
+            .mask('MM/DD/YYYY', '_');
+          </code>
+        </pre>
+      </div>
+      <div id="cc-exp-short" class="inner-container">
+        <div class="mb-5">
+          <label for="cc-exp-short" class="flex justify-content-between">
+            Expiration date <b>MM/YY</b>
+          </label>
+          <span class="field-space"></span>
+        </div>
+        <pre>
+          <code class="javascript">f.field('#cc-exp-short',
+            {yearLength: '2'});
+          </code>
+        </pre>
+      </div>
+      <div id="cc-exp-full" class="inner-container">
+        <div class="mb-5">
+          <label for="cc-exp-full" class="flex justify-content-between"> Expiration date <b>MM/YYYY</b></label>
+          <span class="field-space"></span>
+        </div>
+        <pre>
+          <code class="javascript">f.field('#cc-exp-full .field-space',
+            {yearLength: '4'});
+          </code>
+        </pre>
+      </div>
+    </form>
+  </section>
+</main>
+<footer class="page-footer font-small cyan darken-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 py-2">
+        <div class="d-flex justify-content-center">
+          <a href="https://github.com/verygoodsecurity/" class="p-2" target="_blank">
+            <i class="fab fa-github-square"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/18142614/" class="p-2" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/verygoodsecurity/" class="p-2" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com/getvgs" class="p-2" target="_blank">
+            <i class="fab fa-twitter-square"></i>
+          </a>
+          <a href="https://www.facebook.com/getvgs/" class="p-2" target="_blank">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright text-center pb-3">© 2019 VERY GOOD SECURITY, Inc.</div>
+</footer>
+
+<script src="vendor/jquery-3.3.1.min.js"></script>
+<script src="vendor/bootstrap/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  $('.alert').alert();
+</script>
+
+<script src="js/script.js"></script>
+<script src="masked-examples/masked-examples.js"></script>
+
+</body>
+</html>
