@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>VGS Collect Login data Example</title>
+  <title>VGS Collect.js Login data Example</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <!--Replace with generated for your organization JS file.-->
-  <script src="https://js.verygoodvault.com/vgs-collect/1/<organization-id>.js"></script>
+  <!--VGS Collect.js v1.0. Replace with generated for your organization JS file.-->
+  <!--<script type="text/javascript" src="https://js.verygoodvault.com/vgs-collect/1/<organization-id>.js"></script>-->
+
+  <!--VGS Collect.js v2.0-->
+  <script type="text/javascript" src="https://js.verygoodvault.com/vgs-collect/2/vgs-collect.js"></script>
 
   <style>
     body {
@@ -73,13 +76,13 @@
             <div class="form-group">
               <label for="email">Email</label>
               <span id="email" class="form-field">
-                 <!--VGS Collect iframe for the email field will be here!-->
+                 <!--VGS Collect.js iframe for the email field will be here!-->
               </span>
             </div>
             <div class="form-group">
               <label for="password">Password</label>
               <span id="password" class="form-field">
-                <!--VGS Collect iframe for the password field will be here!-->
+                <!--VGS Collect.js iframe for the password field will be here!-->
               </span>
             </div>
 
@@ -109,12 +112,17 @@
   </div>
 </main>
 
-<!--Include script with VGS Collect form initialization-->
+<!--Include script with VGS Collect.js form initialization-->
 <script>
   // VGS Collect form initialization
-  const form = VGSCollect.create('<vault-id>', function(state) {});
 
-  // Create VGS Collect field for email
+  // VGS Collect.js v1.0
+  //const form = VGSCollect.create('<vault_id>', function(state) {});
+
+  // VGS Collect.js v2.0 <access_key> - generated hash which you can find on VGS Collect tab on a Dashboard.
+  const form = VGSCollect.create('<access_key>', function(state) {});
+
+  // Create VGS Collect.js field for email
   form.field('#email', {
     type: 'text',
     name: 'login_email',
@@ -122,7 +130,7 @@
     validations: ['required'],
   });
 
-  // Create VGS Collect field for password
+  // Create VGS Collect.js field for password
   form.field('#password', {
     type: 'password',
     name: 'login_password',

@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>VGS Collect Credit Card Example</title>
+  <title>VGS Collect.js Credit Card Example</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <!--Replace with generated for your organization JS file.-->
-  <script type="text/javascript" src="https://js.verygoodvault.com/vgs-collect/1/<organization-id>.js"></script>
+  <!--VGS Collect.js v1.0. Replace with generated for your organization JS file.-->
+  <!--<script type="text/javascript" src="https://js.verygoodvault.com/vgs-collect/1/<organization-id>.js"></script>-->
+
+  <!--VGS Collect.js v2.0-->
+  <script type="text/javascript" src="https://js.verygoodvault.com/vgs-collect/2/vgs-collect.js"></script>
 
   <style>
     body {
@@ -73,25 +76,25 @@
             <div class="form-group">
               <label for="cc-name">Name</label>
               <span id="cc-name" class="form-field">
-                <!--VGS Collect iframe for card name field will be here!-->
+                <!--VGS Collect.js iframe for card name field will be here!-->
               </span>
             </div>
             <div class="form-group">
               <label for="cc-number">Card number</label>
               <span id="cc-number" class="form-field">
-                <!--VGS Collect iframe for card number field will be here!-->
+                <!--VGS Collect.js iframe for card number field will be here!-->
               </span>
             </div>
             <div class="form-group">
               <label for="cc-cvc">CVC</label>
               <span id="cc-cvc" class="form-field">
-              <!--VGS Collect iframe for CVC field will be here!-->
+              <!--VGS Collect.js iframe for CVC field will be here!-->
               </span>
             </div>
             <div class="form-group">
               <label for="cc-expiration-date">Expiration date</label>
               <span id="cc-expiration-date" class="form-field">
-              <!--VGS Collect iframe for expiration date field will be here!-->
+              <!--VGS Collect.js iframe for expiration date field will be here!-->
               </span>
             </div>
 
@@ -104,7 +107,7 @@
     <div class="col-md-4">
       <div class="alert alert-secondary">
         <h5 class="text-center">Instruction</h5>
-        <p>1. Go back to the VGS Collect tab on a Dashboard and change the library file to your own.</p>
+        <p>1. Go back to the VGS Collect.js tab on a Dashboard and change the library file to your own.</p>
         <p>2. Make sure you initialize form using right environment param.</p>
         <p>3. Create an inbound route, proceed to Logs on a Dashboard and start recording traffic.</p>
         <p>4. Fill in and submit the form.</p>
@@ -121,12 +124,17 @@
   </div>
 </main>
 
-<!--Include script with VGS Collect form initialization-->
+<!--Include script with VGS Collect.js form initialization-->
 <script>
-  // VGS Collect form initialization
-  const form = VGSCollect.create('<vault-id>', function(state) {});
+  // VGS Collect.js form initialization
 
-  // Create VGS Collect field for credit card name
+  // VGS Collect.js v1.0
+  //const form = VGSCollect.create('<vault_id>', function(state) {});
+
+  // VGS Collect.js v2.0 <access_key> - generated hash which you can find on VGS Collect tab on a Dashboard.
+  const form = VGSCollect.create('<access_key>', function(state) {});
+
+  // Create VGS Collect.jsfield for credit card name
   form.field('#cc-name', {
     type: 'text',
     name: 'card_name',
@@ -134,7 +142,7 @@
     validations: ['required'],
   });
 
-  // Create VGS Collect field for credit card number
+  // Create VGS Collect.js field for credit card number
   form.field('#cc-number', {
     type: 'card-number',
     name: 'card_number',
@@ -144,7 +152,7 @@
     validations: ['required', 'validCardNumber'],
   });
 
-  // Create VGS Collect field for CVC
+  // Create VGS Collect.js field for CVC
   form.field('#cc-cvc', {
     type: 'card-security-code',
     name: 'card_cvc',
@@ -152,7 +160,7 @@
     validations: ['required', 'validCardSecurityCode'],
   });
 
-  // Create VGS Collect field for credit card expiration date
+  // Create VGS Collect.js field for credit card expiration date
   form.field('#cc-expiration-date', {
     type: 'card-expiration-date',
     name: 'card_expirationDate',

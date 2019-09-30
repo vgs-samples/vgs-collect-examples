@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>VGS Collect PII Example</title>
+  <title>VGS Collect.js PII Example</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <!--Replace with generated for your organization JS file.-->
-  <script src="https://js.verygoodvault.com/vgs-collect/1/<organization-id>.js"></script>
+  <!--VGS Collect.js v1.0. Replace with generated for your organization JS file.-->
+  <!--<script type="text/javascript" src="https://js.verygoodvault.com/vgs-collect/1/<organization-id>.js"></script>-->
+
+  <!--VGS Collect.js v2.0-->
+  <script type="text/javascript" src="https://js.verygoodvault.com/vgs-collect/2/vgs-collect.js"></script>
 
   <style>
     body {
@@ -74,19 +77,19 @@
             <div class="form-group">
               <label for="pii-first-name">First Name</label>
               <span id="pii-first-name" class="form-field">
-                 <!--VGS Collect iframe for the first name will be here!-->
+                 <!--VGS Collect.js iframe for the first name will be here!-->
               </span>
             </div>
             <div class="form-group">
               <label for="pii-last-name">Last Name</label>
               <span id="pii-last-name" class="form-field">
-                <!--VGS Collect iframe for the last name field will be here!-->
+                <!--VGS Collect.js iframe for the last name field will be here!-->
               </span>
             </div>
             <div class="form-group">
               <label for="ssn">SSN</label>
               <span id="ssn" class="form-field">
-                <!--VGS Collect iframe for the SSN field will be here!-->
+                <!--VGS Collect.js iframe for the SSN field will be here!-->
               </span>
             </div>
 
@@ -116,12 +119,17 @@
   </div>
 </main>
 
-<!--Include script with VGS Collect form initialization-->
+<!--Include script with VGS Collect.js form initialization-->
 <script>
   // VGS Collect form initialization
-  const form = VGSCollect.create('<vault-id>', function(state) {});
 
-  // Create VGS Collect field for the first name
+  // VGS Collect.js v1.0
+  //const form = VGSCollect.create('<vault_id>', function(state) {});
+
+  // VGS Collect.js v2.0 <access_key> - generated hash which you can find on VGS Collect tab on a Dashboard.
+  const form = VGSCollect.create('<access_key>', function(state) {});
+
+  // Create VGS Collect.js field for the first name
   form.field('#pii-first-name', {
     type: 'text',
     name: 'pii_first_name',
@@ -129,7 +137,7 @@
     validations: ['required'],
   });
 
-  // Create VGS Collect field for the last name
+  // Create VGS Collect.js field for the last name
   form.field('#pii-last-name', {
     type: 'text',
     name: 'pii_last_name',
@@ -137,7 +145,7 @@
     validations: ['required'],
   });
 
-  // Create VGS Collect field for ssn
+  // Create VGS Collect.js field for ssn
   form.field('#ssn', {
     type: 'text',
     name: 'pii_ssn',

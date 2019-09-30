@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>VGS Collect Shipping Info Example</title>
+  <title>VGS Collect.js Shipping Info Example</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <!--Replace with generated for your organization JS file.-->
-  <script src="https://js.verygoodvault.com/vgs-collect/1/<organization-id>.js"></script>
+  <!--VGS Collect.js v1.0. Replace with generated for your organization JS file.-->
+  <!--<script type="text/javascript" src="https://js.verygoodvault.com/vgs-collect/1/<organization-id>.js"></script>-->
+
+  <!--VGS Collect.js v2.0-->
+  <script type="text/javascript" src="https://js.verygoodvault.com/vgs-collect/2/vgs-collect.js"></script>
 
   <style>
     body {
@@ -75,43 +78,43 @@
             <div class="form-group">
               <label for="cc-first-name">First Name</label>
               <span id="cc-first-name" class="form-field">
-                 <!--VGS Collect iframe for the first name field will be here!-->
+                 <!--VGS Collect.js iframe for the first name field will be here!-->
               </span>
             </div>
             <div class="form-group">
               <label for="cc-last-name">Last Name</label>
               <span id="cc-last-name" class="form-field">
-                <!--VGS Collect iframe for the last name field will be here!-->
+                <!--VGS Collect.js iframe for the last name field will be here!-->
               </span>
             </div>
             <div class="form-group">
               <label for="cc-address">Address</label>
               <span id="cc-address" class="form-field">
-                <!--VGS Collect iframe for address field will be here!-->
+                <!--VGS Collect.js iframe for address field will be here!-->
               </span>
             </div>
             <div class="form-group">
               <label for="cc-country">Country</label>
               <span id="cc-country" class="form-field">
-                <!--VGS Collect iframe for the country field will be here!-->
+                <!--VGS Collect.js iframe for the country field will be here!-->
               </span>
             </div>
             <div class="form-group">
               <label for="cc-city">City</label>
               <span id="cc-city" class="form-field">
-                <!--VGS Collect iframe for the city field will be here!-->
+                <!--VGS Collect.js iframe for the city field will be here!-->
               </span>
             </div>
             <div class="form-group">
               <label for="cc-region">Region</label>
               <span id="cc-region" class="form-field">
-                <!--VGS Collect iframe for the region field will be here!-->
+                <!--VGS Collect.js iframe for the region field will be here!-->
               </span>
             </div>
             <div class="form-group">
               <label for="cc-zip">Zip Code</label>
               <span id="cc-zip" class="form-field">
-                <!--VGS Collect iframe for zip code field will be here!-->
+                <!--VGS Collect.js iframe for zip code field will be here!-->
               </span>
             </div>
 
@@ -141,12 +144,17 @@
   </div>
 </main>
 
-<!--Include script with VGS Collect form initialization-->
+<!--Include script with VGS Collect.js form initialization-->
 <script>
   // VGS Collect form initialization
-  const form = VGSCollect.create('<vault-id>', function(state) {});
 
-  // Create VGS Collect field for the first name
+  // VGS Collect.js v1.0
+  //const form = VGSCollect.create('<vault_id>', function(state) {});
+
+  // VGS Collect.js v2.0 <access_key> - generated hash which you can find on VGS Collect tab on a Dashboard.
+  const form = VGSCollect.create('<access_key>', function(state) {});
+
+  // Create VGS Collect.js field for the first name
   form.field('#cc-first-name', {
     type: 'text',
     name: 'shipping_first_name',
@@ -154,7 +162,7 @@
     validations: ['required'],
   });
 
-  // Create VGS Collect field for the last name
+  // Create VGS Collect.js field for the last name
   form.field('#cc-last-name', {
     type: 'text',
     name: 'shipping_last_name',
@@ -162,7 +170,7 @@
     validations: ['required'],
   });
 
-  // Create VGS Collect field for an address
+  // Create VGS Collect.js field for an address
   form.field('#cc-address', {
     type: 'text',
     name: 'shipping_address',
@@ -170,7 +178,7 @@
     validations: ['required'],
   });
 
-  // Create VGS Collect field for country
+  // Create VGS Collect.js field for country
   form.field('#cc-country', {
     type: 'dropdown',
     name: 'shipping_country',
@@ -183,7 +191,7 @@
     ]
   });
 
-  // Create VGS Collect field for the city
+  // Create VGS Collect.js field for the city
   form.field('#cc-city', {
     type: 'text',
     name: 'shipping_city',
@@ -191,7 +199,7 @@
     validations: ['required'],
   });
 
-  // Create VGS Collect field for the region
+  // Create VGS Collect.js field for the region
   form.field('#cc-region', {
     type: 'text',
     name: 'shipping_region',
@@ -199,7 +207,7 @@
     validations: ['required'],
   });
 
-  // Create VGS Collect field for zip code
+  // Create VGS Collect.js field for zip code
   form.field('#cc-zip', {
     type: 'zip-code',
     name: 'shipping_zip',
