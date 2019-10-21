@@ -1,4 +1,4 @@
-const f = VGSCollect.create('tntq4dwvhri', function(state) {});
+const f = VGSCollect.create('57ba9c6dc96c10354fcc16a21a5600d4af275fbc024668e69e01706d30e94f1e', function(state) {});
 
 const css = {
   'fontSize': '16px',
