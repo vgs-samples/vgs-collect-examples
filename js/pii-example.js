@@ -1,4 +1,4 @@
-var pii_form = VGSCollect.create('tntq4dwvhri', '<sandbox || live>', function(state) {
+var pii_form = VGSCollect.create('tntq4dwvhri', 'sandbox', function(state) {
   document.getElementById('pii-preview').innerText = JSON.stringify(state, null, '  ');
 });
 
