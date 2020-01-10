@@ -1,4 +1,4 @@
-var pii_form = VGSCollect.create('tntq4dwvhri', function(state) {});
+var pii_form = VGSCollect.create('tntq4dwvhri', 'sandbox', function(state) {});
 var requestError = $(".request-error");
 var requestSuccess = $(".request-success");
 var styles = {
