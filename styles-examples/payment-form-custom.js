@@ -1,4 +1,4 @@
-var payment_form = VGSCollect.create('tntq4dwvhri', 'sandbox', function(state) {});
+var payment_form = VGSCollect.create('tntq4dwvhri', '<sandbox || live>', function(state) {});
 var requestError = $(".request-error");
 var requestSuccess = $(".request-success");
 var styles = {

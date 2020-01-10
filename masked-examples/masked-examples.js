@@ -1,4 +1,4 @@
-const f = VGSCollect.create('tntq4dwvhri', 'sandbox', function(state) {});
+const f = VGSCollect.create('tntq4dwvhri', '<sandbox || live>', function(state) {});
 
 const css = {
   'fontSize': '16px',
