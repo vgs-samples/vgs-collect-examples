@@ -1,4 +1,4 @@
-var f = VGSCollect.create('tntq4dwvhri', function(state) {
+var f = VGSCollect.create('tntq4dwvhri', 'sandbox', function(state) {
   document.getElementById('card-preview').innerText = JSON.stringify(state, null, '  ');
 });
 

@@ -13,7 +13,7 @@
 3. Change `<vault-id>` to your vault id to initialize your Collect form
 
 ```javascript
-const form = VGSCollect.create('<vault-id>', function(state) {});
+const form = VGSCollect.create('<vault-id>', 'sandbox',  function(state) {});
 ```
 
 4. Integrate with VGS creating [inbound connection](https://www.verygoodsecurity.com/docs/getting-started#securing-your-inbound-connection) (or route) on [VGS Dashboard](https://dashboard.verygoodsecurity.com/) and submit Collect form

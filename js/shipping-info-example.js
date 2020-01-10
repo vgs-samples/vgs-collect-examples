@@ -1,4 +1,4 @@
-var shipping_form = VGSCollect.create('tntq4dwvhri', function(state) {
+var shipping_form = VGSCollect.create('tntq4dwvhri', 'sandbox', function(state) {
   document.getElementById('shipping-preview').innerText = JSON.stringify(state, null, '  ');
 });
 
