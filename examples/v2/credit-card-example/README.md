@@ -7,7 +7,7 @@
 2. Change link below to your personal VGS Collect library link. You can find it at VGS Collect page of [VGS Dashboard](https://dashboard.verygoodsecurity.com/)
 
 ```html
-<script src="https://js.verygoodvault.com/vgs-collect/2.0/vgs-collect.js"></script>
+<script src="https://js.verygoodvault.com/vgs-collect/2.1.0/vgs-collect.js"></script>
 ```
 
 3. Change `<vault-id>` to your vault id to initialize your Collect form
