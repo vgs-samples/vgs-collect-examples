@@ -56,18 +56,14 @@ shipping_form.field('#cc-zip .form-control', {
   validations: ['required'],
 });
 
+shipping_form.on('enterPress', function () {
+  const targetForm = document.getElementById('cc-form-shipping-info');
+  submitForm(shipping_form, targetForm);
+});
+
 document.getElementById('cc-form-shipping-info')
-  .addEventListener('submit', function(e) {
-    e.preventDefault();
-    let targetForm = e.target;
-    shipping_form.submit('/post', {
-      headers: {
-        'x-custom-header': 'Oh yes. I am a custom header',
-      },
-    }, function(status, data) {
-      cleanErrorMessages(targetForm);
-      highlight(targetForm, JSON.stringify(data, null, 4));
-    }, function(errors) {
-      highlightErrors(targetForm, errors);
-    });
-  }, false);
+.addEventListener('submit', function(e) {
+  let targetForm = e.target;
+  e.preventDefault();
+  submitForm(shipping_form, targetForm);
+}, false);

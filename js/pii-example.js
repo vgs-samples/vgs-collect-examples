@@ -17,24 +17,20 @@ pii_form.field('#pii-last-name .form-control', {
 });
 
 pii_form.field('#ssn .form-control', {
-  type: 'text',
+  type: 'ssn',
   name: 'piiSsn',
   placeholder: 'AAA-GG-SSSS',
   validations: ['required'],
 });
 
+pii_form.on('enterPress', function () {
+  const targetForm = document.getElementById('form-pii-info');
+  submitForm(pii_form, targetForm);
+});
+
 document.getElementById('form-pii-info')
-  .addEventListener('submit', function(e) {
-    e.preventDefault();
-    let targetForm = e.target;
-    pii_form.submit('/post', {
-      headers: {
-        'x-custom-header': 'Oh yes. I am a custom header',
-      },
-    }, function(status, data) {
-      cleanErrorMessages(targetForm);
-      highlight(targetForm, JSON.stringify(data, null, 4));
-    }, function(errors) {
-      highlightErrors(targetForm, errors);
-    });
-  }, false);
+.addEventListener('submit', function(e) {
+  let targetForm = e.target;
+  e.preventDefault();
+  submitForm(pii_form, targetForm);
+}, false);

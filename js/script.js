@@ -15,6 +15,15 @@ var highlightErrors = function(targetForm, errors) {
   }
 };
 
+const submitForm = function (form, targetForm) {
+  form.submit('/post', {}, function(status, data) {
+    cleanErrorMessages(targetForm);
+    highlight(targetForm, JSON.stringify(data, null, 4));
+  }, function (errors) {
+    highlightErrors(targetForm, errors);
+  });
+}
+
 $(function () {
   $('[data-toggle="popover"]').popover();
 });
