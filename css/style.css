@@ -195,7 +195,8 @@
 
   a.open-code-btn {
     font-size: 14px;
-    width: 170px;
+    width: 172px;
+    margin-bottom: 3rem;
   }
 
   .btn:hover {
@@ -223,22 +224,6 @@
 
   .styles-code-example pre code{
     background-color: white;
-  }
-
-  .btn-outline-primary {
-    color: #3B495C;
-    box-shadow: 0 10px 15px rgba(0,0,0,.15);
-    background-color: transparent;
-    background-image: none;
-    border-color: #3B495C;
-  }
-
-  .btn-outline-primary:hover,
-  .btn-outline-primary:focus,
-  .btn-outline-primary:active {
-    color: #fff !important;
-    background-color: #3B495C !important;
-    border-color: #3B495C !important;
   }
 
   /*Credit cart styles example*/
@@ -812,7 +797,7 @@
     box-shadow: none;
     font-size: 1rem;
     padding: 0 16px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.8rem;
     outline: none;
   }
@@ -851,13 +836,16 @@
     border: 2px solid #145FF5;
   }
 
-  .btn-outline:hover {
-    color: #04c;
-    border-color: #04c;
+  .btn-outline:hover,
+  .btn-outline:active,
+  .btn-outline:focus {
+    background-color: #F0F6FF;
+    color: #145FF5;
   }
 
   .btn-link {
     color:#145FF5;
+    font-weight: 500;
   }
 
   .btn-link:hover {
@@ -882,7 +870,6 @@
 
   .loading {
     position: relative;
-    background-color: #DEDEDE !important;
     border-width: 0;
     font-size: 0;
   }
@@ -895,12 +882,27 @@
     display: block;
     content: '';
     position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 30px);
+    height: 1rem;
     animation: loading 2s infinite;
-    transform: translateX(-100%);
+    transform: translate(-50%, -50%);
+    border-radius: .25rem;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .2), transparent);
+  }
+
+  .loading::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 30px);
+    height: 1rem;
+    border-radius: .25rem;
+    transform: translate(-50%, -50%);
+    background-color: #DEDEDE !important;
   }
 
   @keyframes loading {

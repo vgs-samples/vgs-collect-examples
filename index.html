@@ -5,14 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="favicon.ico">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
@@ -38,7 +33,7 @@
             Style Examples
           </a>
           <a target="_blank" href="./masked-examples.html" class="btn btn-primary">
-            Input masking
+            Input Masking
           </a>
         </div>
       </div>
@@ -47,10 +42,10 @@
     <section class="container examples-list-container">
       <div class="row text-center">
         <div class="col-md-3">
-          <a href="#credit-card-example" class="btn-link">Credit Card</a>
+          <a href="#credit-card-example" class="btn-link">Credit card</a>
         </div>
         <div class="col-md-3">
-          <a href="#shipping-info-example" class="btn-link">Billing or Shipping Address</a>
+          <a href="#shipping-info-example" class="btn-link">Billing or shipping address</a>
         </div>
         <div class="col-md-3">
           <a href="#login-data-example" class="btn-link">Login data</a>
@@ -72,7 +67,7 @@
             see the response in the <b>response</b> window. Take a look at
             the <b>state</b> window every time you change the value.
             <a href="https://github.com/verygoodsecurity/vgs-collect-examples/tree/master/examples/v2/credit-card-example"
-               target="_blank" class="btn btn-outline mb-4 mt-2 d-block open-code-btn">Open code example</a>
+               target="_blank" class="btn btn-outline mt-2 d-block open-code-btn">Open Code Example</a>
           </p>
           <form id="cc-form">
             <fieldset>
@@ -165,7 +160,7 @@
             see the response in the <b>response</b> window. Take a look at
             the <b>state</b> window every time you change the value.
             <a href="https://github.com/verygoodsecurity/vgs-collect-examples/tree/master/examples/v2/shipping-info-example"
-               target="_blank" class="btn btn-outline mb-4 mt-2 d-block open-code-btn">Open code example</a>
+               target="_blank" class="btn btn-outline mt-2 d-block open-code-btn">Open Code Example</a>
           </p>
           <form id="form-shipping-info">
             <fieldset>
@@ -225,7 +220,7 @@
                 <div class="col-sm-3">
                   <div id="shipping-zip" class="form-group">
                     <span class="form-control loading">
-                      <label for="shipping-zip">*Zip Code</label>
+                      <label for="shipping-zip">*Zip code</label>
                     </span>
                     <span class="error-message" data-name="shippingZip"></span>
                   </div>
@@ -282,7 +277,7 @@
             see the response in the <b>response</b> window. Take a look at
             the <b>state</b> window every time you change the value.
             <a href="https://github.com/verygoodsecurity/vgs-collect-examples/tree/master/examples/v2/login-data-example"
-               target="_blank" class="btn btn-outline mb-4 mt-2 d-block open-code-btn">Open code example</a>
+               target="_blank" class="btn btn-outline mt-2 d-block open-code-btn">Open Code Example</a>
           </p>
           <form id="form-login-info">
             <fieldset>
@@ -357,37 +352,26 @@
             see the response in the <b>response</b> window. Take a look at
             the <b>state</b> window every time you change the value.
             <a href="https://github.com/verygoodsecurity/vgs-collect-examples/tree/master/examples/v2/pii-example"
-               target="_blank" class="btn btn-outline mb-4 mt-2 d-block open-code-btn">Open code example</a>
+               target="_blank" class="btn btn-outline mt-2 d-block open-code-btn">Open Code Example</a>
           </p>
           <form id="form-pii-info">
             <fieldset>
               <div class="row">
-
-                <div class="col-sm-6">
-                  <div id="pii-first-name" class="form-group">
+                <div class="col-sm-12">
+                  <div id="pii-full-name" class="form-group">
                     <span class="form-control loading">
-                      <label for="pii-first-name-field">*First Name</label>
+                      <label for="pii-full-name-field">*Full name</label>
                     </span>
-                    <span class="error-message" data-name="piiFirstName"></span>
+                    <span class="error-message" data-name="piiFullName"></span>
                   </div>
                 </div>
-
-                <div class="col-sm-6">
-                  <div id="pii-last-name" class="form-group">
-                    <span class="form-control loading">
-                      <label for="pii-last-name-field">*Last Name</label>
-                    </span>
-                    <span class="error-message" data-name="piiLastName"></span>
-                  </div>
-                </div>
-
               </div>
 
               <div class="row">
                 <div class="col-sm-12">
                   <div id="ssn" class="form-group">
                     <span class="form-control loading">
-                      <label for="email-field">SSN</label>
+                      <label for="email-field">*SSN</label>
                     </span>
                     <span class="error-message" data-name="piiSsn"></span>
                   </div>

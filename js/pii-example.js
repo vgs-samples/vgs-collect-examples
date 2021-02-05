@@ -12,20 +12,12 @@ var pii_form = VGSCollect.create('tntq4dwvhri', 'sandbox', function(state) {
   }
 });
 
-const firstName = pii_form.field('#pii-first-name .form-control', {
+const fullName = pii_form.field('#pii-full-name .form-control', {
   type: 'text',
-  name: 'piiFirstName',
-  placeholder: 'Joe',
+  name: 'piiFullName',
+  placeholder: 'Joe Business',
   validations: ['required'],
   autoComplete: 'name',
-  css,
-});
-
-const lastName = pii_form.field('#pii-last-name .form-control', {
-  type: 'text',
-  name: 'piiLastName',
-  placeholder: 'Business',
-  validations: ['required'],
   css,
 });
 
@@ -42,7 +34,7 @@ pii_form.on('enterPress', function () {
   submitForm(pii_form, targetForm);
 });
 
-Promise.all([firstName.promise, lastName.promise, ssn.promise]).then(function () {
+Promise.all([fullName.promise, ssn.promise]).then(function () {
   const fields = document.querySelectorAll('#form-pii-info .loading');
   for (var i = 0; i < fields.length; i++) {
     fields[i].classList.remove('loading');

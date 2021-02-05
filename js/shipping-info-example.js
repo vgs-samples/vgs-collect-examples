@@ -15,7 +15,7 @@ const shipping_form = VGSCollect.create('tntq4dwvhri', 'sandbox', function(state
 const shippingName = shipping_form.field('#shipping-full-name .form-control', {
   type: 'text',
   name: 'shippingFirstName',
-  placeholder: 'Joe',
+  placeholder: 'Joe Business',
   validations: ['required'],
   autoComplete: 'name',
   css,
@@ -64,7 +64,7 @@ const region = shipping_form.field('#shipping-region .form-control', {
 const zip = shipping_form.field('#shipping-zip .form-control', {
   type: 'zip-code',
   name: 'shippingZip',
-  placeholder: 'Zip Code',
+  placeholder: 'Zip code',
   validations: ['required'],
   autoComplete: 'postal-code',
   css
