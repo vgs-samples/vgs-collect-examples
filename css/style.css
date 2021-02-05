@@ -8,12 +8,8 @@
 
   button[type="submit"] {
     width: 100%;
-    color: white;
     height: 2.6rem;
-    background-color: #293846;
-    box-shadow: 0px 0px 6px rgba(23, 31, 39, 0.3);
     border-radius: .25rem;
-    text-transform: uppercase;
   }
 
   button[type="submit"]:disabled {
@@ -64,7 +60,7 @@
 
   .output-label {
     padding: 2px 10px;
-    background-color: #293846;
+    background-color: #07193A;
     color: white;
     margin: 0;
     border-radius: 2px;
@@ -866,6 +862,22 @@
 
   .btn-link:hover {
     color: #04c;
+  }
+
+  .btn-tertiary {
+    background-color: #07193A;
+    border-color: #07193A;
+    color: #fff;
+  }
+
+  .btn-tertiary:hover {
+    background-color: #002270;
+    border-color: #002270;
+  }
+
+  .btn-tertiary:active {
+    background-color: #0037A3;
+    border-color: #0037A3;
   }
 
   .loading {
