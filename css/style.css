@@ -9,11 +9,8 @@
   button[type="submit"] {
     width: 100%;
     height: 2.6rem;
+    margin-bottom: 3rem;
     border-radius: .25rem;
-  }
-
-  button[type="submit"]:disabled {
-    opacity: .2;
   }
 
   .form-control-static iframe,
@@ -77,6 +74,8 @@
     font-size: 20px;
     vertical-align: text-top;
     margin-right: 10px;
+    border: none;
+    background-color: transparent;
     color: #333;
   }
 
@@ -875,21 +874,24 @@
   }
 
   .loading iframe {
-    visibility: hidden;
+    display: none;
   }
 
   .loading::after {
     display: block;
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: calc(100% - 30px);
+    top: 11px;
+    width: 80%;
     height: 1rem;
-    animation: loading 2s infinite;
-    transform: translate(-50%, -50%);
+    -webkit-animation: loading 2s infinite;
+            animation: loading 2s infinite;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
     border-radius: .25rem;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .2), transparent);
+    background: -o-linear-gradient(left, transparent, rgba(255, 255, 255, .2), transparent);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .2), rgba(255, 255, 255, 0));
   }
 
   .loading::before {
@@ -901,12 +903,23 @@
     width: calc(100% - 30px);
     height: 1rem;
     border-radius: .25rem;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     background-color: #DEDEDE !important;
+  }
+
+  @-webkit-keyframes loading {
+    100% {
+      -webkit-transform: translateX(100%);
+              transform: translateX(100%);
+    }
   }
 
   @keyframes loading {
     100% {
-      transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+              transform: translateX(100%);
     }
   }
+  

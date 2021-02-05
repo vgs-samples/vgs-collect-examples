@@ -55,7 +55,7 @@ const city = shipping_form.field('#shipping-city .form-control', {
 const region = shipping_form.field('#shipping-region .form-control', {
   type: 'text',
   name: 'shippingRegion',
-  placeholder: 'Region',
+  placeholder: 'State',
   validations: ['required'],
   autoComplete: 'region',
   css,
@@ -64,7 +64,7 @@ const region = shipping_form.field('#shipping-region .form-control', {
 const zip = shipping_form.field('#shipping-zip .form-control', {
   type: 'zip-code',
   name: 'shippingZip',
-  placeholder: 'Zip code',
+  placeholder: 'ZIP code',
   validations: ['required'],
   autoComplete: 'postal-code',
   css

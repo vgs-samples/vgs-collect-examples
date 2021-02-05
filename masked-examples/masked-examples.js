@@ -1,18 +1,5 @@
 const f = VGSCollect.create('tntq4dwvhri', 'sandbox', function(state) {});
 
-// const masking_styles = {
-//   'fontSize': '16px',
-//   'fontFamily': 'Helvetica Neue, sans-serif',
-//   'fontWeight': '200',
-//   '&:placeholder': {
-//     'fontSize': '16px',
-//     'fontFamily': 'Helvetica Neue, sans-serif',
-//     'fontWeight': '200',
-//     'color': '#756bb1',
-//   },
-//   'color': '#756bb1',
-// };
-
 f.field('#cc-holder .field-space', {
   type: 'text',
   name: 'card-name',
@@ -59,7 +46,7 @@ f.field('#ssn .field-space', {
 f.field('#zip-code .field-space', {
   type: 'zip-code',
   name: 'zip-code',
-  placeholder: 'Zip code',
+  placeholder: 'ZIP code',
   validations: ['required'],
   css,
 }).replacePattern('/[^\\d]+/g');

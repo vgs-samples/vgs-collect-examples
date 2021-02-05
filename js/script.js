@@ -46,7 +46,11 @@ const css = {
     'unicode-range': 'U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116',
   },
   '&::placeholder': {
-    'color': '#C8D0DB'
+    'color': '#C8D0DB',
+    'line-height': '16px'
+  },
+  '&::-webkit-input-placeholder': {
+    'line-height': 'normal!important',
   },
   'font-family': '"Inter", sans-serif',
   'font-size': '16px',
