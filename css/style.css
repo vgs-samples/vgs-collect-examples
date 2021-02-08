@@ -6,7 +6,7 @@
     max-width: 500px;
   }
 
-  button[type="submit"] {
+  .main-examples button[type="submit"] {
     width: 100%;
     height: 2.6rem;
     margin-bottom: 3rem;
@@ -394,7 +394,7 @@
     top: 0;
   }
 
-  .example-container label {
+  .main-examples label {
     position: absolute;
     top: -1.7rem;
     left: 0;
@@ -761,13 +761,17 @@
   }
 
   .example-container 
-  .vgs-collect-container__invalid.vgs-collect-container__touched {
+  .vgs-collect-container__invalid.vgs-collect-container__dirty:not(.vgs-collect-container__focused),
+  .example-container .invalid-field
+   {
     border: 1px solid #FF0000;
     box-shadow: 0px 0px 6px rgba(255, 0, 0, 0.4);
   }
 
   .example-container 
-  .vgs-collect-container__invalid.vgs-collect-container__touched label::after {
+  .vgs-collect-container__invalid.vgs-collect-container__dirty:not(.vgs-collect-container__focused) label::after,
+  .example-container .invalid-field label::after
+  {
     content: '';
     display: inline-block;
     margin-left: .5rem;

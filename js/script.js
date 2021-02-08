@@ -3,21 +3,18 @@ var highlight = function(targetForm, jsonString) {
   $(targetForm).closest('.example-container').find('.response').html(jsonString);
 };
 
-var cleanErrorMessages = function(targetForm) {
-  $(targetForm).find('.error-message').text('');
-};
-
 var highlightErrors = function(targetForm, errors) {
-  cleanErrorMessages(targetForm);
-  for(var error in errors) {
+  $(targetForm).find('.vgs-collect-container__invalid').addClass('invalid-field');
+  for (var error in errors) {
     let errorMessage = errors[error].errorMessages[0];
-    $(targetForm).find('[data-name="'+ error +'"]').append(errorMessage);
+    if (!$(targetForm).find('[data-name="'+ error +'"]').text()) {
+      $(targetForm).find('[data-name="'+ error +'"]').append(errorMessage);
+    }
   }
 };
 
 const submitForm = function (form, targetForm) {
   form.submit('/post', {}, function(status, data) {
-    cleanErrorMessages(targetForm);
     highlight(targetForm, JSON.stringify(data, null, 4));
   }, function (errors) {
     highlightErrors(targetForm, errors);
@@ -47,7 +44,6 @@ const css = {
   },
   '&::placeholder': {
     'color': '#C8D0DB',
-    'line-height': '16px'
   },
   '&::-webkit-input-placeholder': {
     'line-height': 'normal!important',

@@ -2,11 +2,13 @@ var pii_form = VGSCollect.create('tntq4dwvhri', 'sandbox', function(state) {
   document.getElementById('pii-preview').innerText = JSON.stringify(state, null, '  ');
   if (state) {
     for (let field in state) {
-      if (state[field].errorMessages && !state[field].isValid && state[field].isTouched) {
+      if (state[field].errorMessages && !state[field].isValid && !state[field].isFocused&& state[field].isDirty) {
         const error = state[field].errorMessages[0];
         document.querySelector(`[data-name='${field}']`).innerHTML = error;
-      } else {
+      } else if (state[field].isValid || state[field].isFocused) {
         document.querySelector(`[data-name='${field}']`).innerHTML = '';
+        const frame = document.querySelector(`[data-name='${field}']`).previousElementSibling;
+        frame.classList.remove('invalid-field');
       }
     }
   }
