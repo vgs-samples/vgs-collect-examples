@@ -5,38 +5,35 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="favicon.ico">
-
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
   <link rel="stylesheet" type="text/css" href="https://www.verygoodsecurity.com/theme/css/main.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 
-  <script src="https://js.verygoodvault.com/vgs-collect/2.2.1/vgs-collect.js"></script>
+  <script src="https://js.verygoodvault.com/vgs-collect/2.3.0/vgs-collect.js"></script>
 </head>
 
 <body>
-  <main>
-    <section class="container pt-5 py-lg-5 pb-5">
+  <main class="main-examples">
+    <section class="container pt-5 py-lg-5 pb-lg-5">
       <div class="text-center ">
         <h1 class="mb-2">VGS Collect.js examples</h1>
         <p class="mb-4">VGS Collect.js is a javascript library that allows you to integrate secure fields with non-secure
           fields in your page.
           <br>The secure fields behave like traditional input fields while preventing access to the unsecured data.</p>
         <div class="flex justify-content-center navigation-links">
-          <a target="_blank" href="https://www.verygoodsecurity.com/docs/vgs-collect/what-is-it" class="btn btn-get">
+          <a target="_blank" href="https://www.verygoodsecurity.com/docs/vgs-collect/what-is-it" class="btn btn-primary">
             Documentation
           </a>
-          <a target="_blank" href="./style-examples.html" class="btn btn-outline-primary">
+          <a target="_blank" href="./style-examples.html" class="btn btn-primary">
             Style Examples
           </a>
-          <a target="_blank" href="./masked-examples.html" class="btn btn-outline-primary">
-            Input masking
+          <a target="_blank" href="./masked-examples.html" class="btn btn-primary">
+            Input Masking
           </a>
         </div>
       </div>
@@ -44,17 +41,17 @@
 
     <section class="container examples-list-container">
       <div class="row text-center">
-        <div class="col-md-3">
-          <a href="#credit-card-example" class="">Credit Card</a>
+        <div class="col-md-3 mb-2">
+          <a href="#credit-card-example" class="btn-link">Credit card</a>
         </div>
-        <div class="col-md-3">
-          <a href="#shipping-info-example" class="">Billing or Shipping Address</a>
+        <div class="col-md-3 mb-2">
+          <a href="#shipping-info-example" class="btn-link">Billing or shipping address</a>
         </div>
-        <div class="col-md-3">
-          <a href="#login-data-example" class="">Login data</a>
+        <div class="col-md-3 mb-2">
+          <a href="#login-data-example" class="btn-link">Login data</a>
         </div>
-        <div class="col-md-3">
-          <a href="#pii-example" class="">PII for background checks</a>
+        <div class="col-md-3 mb-2">
+          <a href="#pii-example" class="btn-link">PII for background checks</a>
         </div>
         </div>
       </div>
@@ -70,32 +67,51 @@
             see the response in the <b>response</b> window. Take a look at
             the <b>state</b> window every time you change the value.
             <a href="https://github.com/verygoodsecurity/vgs-collect-examples/tree/master/examples/v2/credit-card-example"
-               target="_blank" class="btn btn-get mb-4 mt-2 d-block open-code-btn">Open code example</a>
+               target="_blank" class="btn btn-outline mt-2 d-block open-code-btn">Open Code Example</a>
           </p>
           <form id="cc-form">
             <fieldset>
-              <div id="cc-name" class="form-group">
-                <label for="cc-name-field">Name on card</label>
-                <span class="form-control"></span>
-                <span class="error-message" data-name="cardName"></span>
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="cc-name" class="form-group">
+                    <span class="form-control loading">
+                      <label for="cc-name-field">*Name on card</label>
+                    </span>
+                    <span class="error-message" data-name="cardName"></span>
+                  </div>
+                </div>
               </div>
-              <div id="cc-number" class="form-group">
-                <label for="cc-number-field">Credit card number</label>
-                <span class="form-control"></span>
-                <span class="error-message" data-name="cardNumber"></span>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="cc-number" class="form-group">
+                    <span class="form-control loading">
+                      <label for="cc-number-field">*Credit card number</label>
+                    </span>
+                    <span class="error-message" data-name="cardNumber"></span>
+                  </div>
+                </div>
               </div>
-              <div id="cc-cvc" class="form-group">
-                <label for="cc-cvc-field">CVC</label>
-                <span class="form-control"></span>
-                <span class="error-message" data-name="cardCvc"></span>
-              </div>
-              <div id="cc-expiration-date" class="form-group">
-                <label for="cc-expiration-date-field">Expiration date</label>
-                <span class="form-control"></span>
-                <span class="error-message" data-name="cardExpirationDate"></span>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div id="cc-expiration-date" class="form-group">
+                    <span class="form-control loading">
+                      <label for="cc-expiration-date-field">*Expiration date</label>
+                    </span>
+                    <span class="error-message" data-name="cardExpirationDate"></span>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div id="cc-cvc" class="form-group">
+                    <span class="form-control loading">
+                      <label for="cc-cvc-field">*Security code</label>
+                    </span>
+                    <span class="error-message" data-name="cardCvc"></span>
+                  </div>
+                </div>
               </div>
             </fieldset>
-            <button type="submit" class="btn btn-info">Submit</button>
+            <button type="submit" class="btn btn-tertiary">Submit</button>
           </form>
         </div>
         <div class="col-md-6">
@@ -113,7 +129,7 @@
           </p>
           <div class="alert alert-secondary output-window credit-card-form-state">
             <div class="info-block">
-              <button type="button" class="state-info-btn btn btn-default btn-sm"
+              <button type="button" class="state-info-btn"
                 data-container=".credit-card-form-state"
                 data-toggle="popover"
                 data-placement="bottom"
@@ -144,36 +160,28 @@
             see the response in the <b>response</b> window. Take a look at
             the <b>state</b> window every time you change the value.
             <a href="https://github.com/verygoodsecurity/vgs-collect-examples/tree/master/examples/v2/shipping-info-example"
-               target="_blank" class="btn btn-get mb-4 mt-2 d-block open-code-btn">Open code example</a>
+               target="_blank" class="btn btn-outline mt-2 d-block open-code-btn">Open Code Example</a>
           </p>
-          <form id="cc-form-shipping-info">
+          <form id="form-shipping-info">
             <fieldset>
 
               <div class="row">
-
-                <div class="col-sm-6">
-                  <div id="cc-first-name" class="form-group">
-                    <label for="cc-first-name-field">First Name</label>
-                    <span class="form-control"></span>
+                <div class="col-sm-12">
+                  <div id="shipping-full-name" class="form-group">
+                    <span class="form-control loading">
+                      <label for="shipping-full-name">*Full name</label>
+                    </span>
                     <span class="error-message" data-name="shippingFirstName"></span>
                   </div>
                 </div>
-
-                <div class="col-sm-6">
-                  <div id="cc-last-name" class="form-group">
-                    <label for="cc-last-name-field">Last Name</label>
-                    <span class="form-control"></span>
-                    <span class="error-message" data-name="shippingLastName"></span>
-                  </div>
-                </div>
-
               </div>
 
               <div class="row">
                 <div class="col-sm-12">
-                  <div id="cc-address" class="form-group">
-                    <label for="cc-address-field">Address</label>
-                    <span class="form-control"></span>
+                  <div id="shipping-address" class="form-group">
+                    <span class="form-control loading">
+                      <label for="shipping-address">*Address</label>
+                    </span>
                     <span class="error-message" data-name="shippingAddress"></span>
                   </div>
                 </div>
@@ -181,43 +189,46 @@
 
               <div class="row">
                 <div class="col-sm-12">
-                  <div id="cc-country" class="form-group">
-                    <label for="cc-country-field">Country</label>
-                    <span class="form-control"></span>
+                  <div id="shipping-country" class="form-group">
+                    <span class="form-control loading">
+                      <label for="shipping-country">*Country</label>
+                    </span>
                     <span class="error-message" data-name="shippingCountry"></span>
                   </div>
                 </div>
               </div>
 
               <div class="row">
-
                 <div class="col-sm-5">
-                  <div id="cc-city" class="form-group">
-                    <label for="cc-city-field">City</label>
-                    <span class="form-control"></span>
+                  <div id="shipping-city" class="form-group">
+                    <span class="form-control loading">
+                      <label for="shipping-city">*City</label>
+                    </span>
                     <span class="error-message" data-name="shippingCity"></span>
                   </div>
                 </div>
 
                 <div class="col-sm-4">
-                  <div id="cc-region" class="form-group">
-                    <label for="cc-region-field">Region</label>
-                    <span class="form-control"></span>
+                  <div id="shipping-region" class="form-group">
+                    <span class="form-control loading">
+                      <label for="shipping-region">*State</label>
+                    </span>
                     <span class="error-message" data-name="shippingRegion"></span>
                   </div>
                 </div>
 
                 <div class="col-sm-3">
-                  <div id="cc-zip" class="form-group">
-                    <label for="cc-zip-field">Zip Code</label>
-                    <span class="form-control"></span>
+                  <div id="shipping-zip" class="form-group">
+                    <span class="form-control loading">
+                      <label for="shipping-zip">*ZIP code</label>
+                    </span>
                     <span class="error-message" data-name="shippingZip"></span>
                   </div>
                 </div>
               </div>
 
             </fieldset>
-            <button type="submit" class="btn btn-info">Send</button>
+            <button type="submit" class="btn btn-tertiary">Send</button>
           </form>
         </div>
         <div class="col-md-6">
@@ -235,7 +246,7 @@
           </p>
           <div class="alert alert-secondary output-window shipping-form-state">
             <div class="info-block">
-              <button type="button" class="state-info-btn btn btn-default btn-sm"
+              <button type="button" class="state-info-btn"
                       data-container=".shipping-form-state"
                       data-toggle="popover"
                       data-placement="bottom"
@@ -266,7 +277,7 @@
             see the response in the <b>response</b> window. Take a look at
             the <b>state</b> window every time you change the value.
             <a href="https://github.com/verygoodsecurity/vgs-collect-examples/tree/master/examples/v2/login-data-example"
-               target="_blank" class="btn btn-get mb-4 mt-2 d-block open-code-btn">Open code example</a>
+               target="_blank" class="btn btn-outline mt-2 d-block open-code-btn">Open Code Example</a>
           </p>
           <form id="form-login-info">
             <fieldset>
@@ -274,23 +285,25 @@
               <div class="row">
                 <div class="col-sm-6">
                   <div id="email" class="form-group">
-                    <label for="email-field">Email</label>
-                    <span class="form-control"></span>
+                    <span class="form-control loading">
+                      <label for="email-field">*Email</label>
+                    </span>
                     <span class="error-message" data-name="loginEmail"></span>
                   </div>
                 </div>
 
                 <div class="col-sm-6">
                   <div id="password" class="form-group">
-                    <label for="password-field">Password</label>
-                    <span class="form-control"></span>
+                    <span class="form-control loading">
+                      <label for="password-field">*Password</label>
+                    </span>
                     <span class="error-message" data-name="loginPassword"></span>
                 </div>
                 </div>
               </div>
 
             </fieldset>
-            <button type="submit" class="btn btn-info">Log in</button>
+            <button type="submit" class="btn btn-tertiary">Log in</button>
           </form>
         </div>
         <div class="col-md-6">
@@ -308,7 +321,7 @@
           </p>
           <div class="alert alert-secondary output-window login-form-state">
             <div class="info-block">
-              <button type="button" class="state-info-btn btn btn-default btn-sm"
+              <button type="button" class="state-info-btn"
                       data-container=".login-form-state"
                       data-toggle="popover"
                       data-placement="bottom"
@@ -339,42 +352,34 @@
             see the response in the <b>response</b> window. Take a look at
             the <b>state</b> window every time you change the value.
             <a href="https://github.com/verygoodsecurity/vgs-collect-examples/tree/master/examples/v2/pii-example"
-               target="_blank" class="btn btn-get mb-4 mt-2 d-block open-code-btn">Open code example</a>
+               target="_blank" class="btn btn-outline mt-2 d-block open-code-btn">Open Code Example</a>
           </p>
           <form id="form-pii-info">
             <fieldset>
               <div class="row">
-
-                <div class="col-sm-6">
-                  <div id="pii-first-name" class="form-group">
-                    <label for="pii-first-name-field">First Name</label>
-                    <span class="form-control"></span>
-                    <span class="error-message" data-name="piiFirstName"></span>
+                <div class="col-sm-12">
+                  <div id="pii-full-name" class="form-group">
+                    <span class="form-control loading">
+                      <label for="pii-full-name-field">*Full name</label>
+                    </span>
+                    <span class="error-message" data-name="piiFullName"></span>
                   </div>
                 </div>
-
-                <div class="col-sm-6">
-                  <div id="pii-last-name" class="form-group">
-                    <label for="pii-last-name-field">Last Name</label>
-                    <span class="form-control"></span>
-                    <span class="error-message" data-name="piiLastName"></span>
-                  </div>
-                </div>
-
               </div>
 
               <div class="row">
                 <div class="col-sm-12">
                   <div id="ssn" class="form-group">
-                    <label for="email-field">SSN</label>
-                    <span class="form-control"></span>
+                    <span class="form-control loading">
+                      <label for="email-field">*SSN</label>
+                    </span>
                     <span class="error-message" data-name="piiSsn"></span>
                   </div>
                 </div>
               </div>
 
             </fieldset>
-            <button type="submit" class="btn btn-info">Search</button>
+            <button type="submit" class="btn btn-tertiary">Search</button>
           </form>
         </div>
         <div class="col-md-6">
@@ -392,7 +397,7 @@
           </p>
           <div class="alert alert-secondary output-window pii-form-state">
             <div class="info-block">
-              <button type="button" class="state-info-btn btn btn-default btn-sm"
+              <button type="button" class="state-info-btn"
                       data-container=".pii-form-state"
                       data-toggle="popover"
                       data-placement="bottom"
@@ -437,7 +442,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-copyright text-center pb-3">© 2019 VERY GOOD SECURITY, Inc.</div>
+    <div class="footer-copyright text-center pb-3">© 2021 VERY GOOD SECURITY, Inc.</div>
   </footer>
 
   <script src="vendor/jquery-3.3.1.min.js"></script>

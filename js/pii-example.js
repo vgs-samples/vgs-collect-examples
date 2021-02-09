@@ -1,31 +1,46 @@
 var pii_form = VGSCollect.create('tntq4dwvhri', 'sandbox', function(state) {
   document.getElementById('pii-preview').innerText = JSON.stringify(state, null, '  ');
+  if (state) {
+    for (let field in state) {
+      if (state[field].errorMessages && !state[field].isValid && !state[field].isFocused&& state[field].isDirty) {
+        const error = state[field].errorMessages[0];
+        document.querySelector(`[data-name='${field}']`).innerHTML = error;
+      } else if (state[field].isValid || state[field].isFocused) {
+        document.querySelector(`[data-name='${field}']`).innerHTML = '';
+        const frame = document.querySelector(`[data-name='${field}']`).previousElementSibling;
+        frame.classList.remove('invalid-field');
+      }
+    }
+  }
 });
 
-pii_form.field('#pii-first-name .form-control', {
+const fullName = pii_form.field('#pii-full-name .form-control', {
   type: 'text',
-  name: 'piiFirstName',
-  placeholder: 'Joe',
+  name: 'piiFullName',
+  placeholder: 'Joe Business',
   validations: ['required'],
+  autoComplete: 'name',
+  css,
 });
 
-pii_form.field('#pii-last-name .form-control', {
-  type: 'text',
-  name: 'piiLastName',
-  placeholder: 'Business',
-  validations: ['required'],
-});
-
-pii_form.field('#ssn .form-control', {
+const ssn = pii_form.field('#ssn .form-control', {
   type: 'ssn',
   name: 'piiSsn',
   placeholder: 'AAA-GG-SSSS',
   validations: ['required'],
+  css,
 });
 
 pii_form.on('enterPress', function () {
   const targetForm = document.getElementById('form-pii-info');
   submitForm(pii_form, targetForm);
+});
+
+Promise.all([fullName.promise, ssn.promise]).then(function () {
+  const fields = document.querySelectorAll('#form-pii-info .loading');
+  for (var i = 0; i < fields.length; i++) {
+    fields[i].classList.remove('loading');
+  }
 });
 
 document.getElementById('form-pii-info')

@@ -4,10 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="favicon.ico">
 
   <link rel="stylesheet" type="text/css" href="https://www.verygoodsecurity.com/theme/css/main.css"/>
@@ -18,7 +16,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-  <script src="https://js.verygoodvault.com/vgs-collect/2.1.0/vgs-collect.js"></script>
+  <script src="https://js.verygoodvault.com/vgs-collect/2.3.0/vgs-collect.js"></script>
 </head>
 
 <body>
@@ -31,21 +29,21 @@
     </button>
   </div>
 
-  <section class="container pt-5 pb-5">
+  <section class="container pt-5 py-lg-5 pb-5">
     <div class="text-center ">
-      <h4 class="mb-5">VGS COLLECT.JS MASKED INPUT EXAMPLES</h4>
+      <h1 class="mb-2">VGS Collect.js examples</h1>
       <p class="mb-4">VGS Collect.js is a javascript library that allows you to integrate secure fields with non-secure
         fields in your page.
         <br>The secure fields behave like traditional input fields while preventing access to the unsecured data.</p>
       <div class="flex justify-content-center navigation-links">
-        <a target="_blank" href="https://www.verygoodsecurity.com/docs/vgs-collect/what-is-it" class="btn btn-outline-primary">
+        <a target="_blank" href="https://www.verygoodsecurity.com/docs/vgs-collect/what-is-it" class="btn btn-primary">
           Documentation
         </a>
-        <a target="_blank" href="./style-examples.html" class="btn btn-outline-primary">
+        <a target="_blank" href="./style-examples.html" class="btn btn-primary">
           Style Examples
         </a>
-        <a target="_blank" href="./masked-examples.html" class="btn btn-get">
-          Input masking
+        <a target="_blank" href="./masked-examples.html" class="btn btn-primary">
+          Input Masking
         </a>
       </div>
     </div>
@@ -64,9 +62,9 @@
       <div id="cc-holder" class="inner-container">
         <div class="mb-5">
           <label for="cc-holder" class="flex justify-content-between">
-            Card Holder <b>Alphabetic only</b>
+            Card holder <b>Alphabetic only</b>
           </label>
-          <span class="field-space"></span>
+          <span class="field-space form-control"></span>
         </div>
         <pre>
           <code class="javascript">f.field('#cc-holder', {...})
@@ -77,9 +75,9 @@
       <div id="zip-code" class="inner-container">
         <div class="mb-5">
           <label for="zip-code" class="flex justify-content-between">
-            Zip code <b>Numeric only</b>
+            ZIP code <b>Numeric only</b>
           </label>
-          <span class="field-space"></span>
+          <span class="field-space form-control"></span>
         </div>
         <pre>
           <code class="javascript">f.field('#zip-code', {...})
@@ -92,7 +90,7 @@
           <label for="phone-number" class="flex justify-content-between">
             Phone number <b>+1 (XXX) XXX-XX-XX</b>
           </label>
-          <span class="field-space"></span>
+          <span class="field-space form-control"></span>
         </div>
         <pre>
           <code class="javascript">f.field('#phone-number', {...})
@@ -105,7 +103,7 @@
           <label for="ssn" class="flex justify-content-between">
             SSN <b>XXX-XX-XXXX</b>
           </label>
-          <span class="field-space"></span>
+          <span class="field-space form-control"></span>
         </div>
         <pre>
           <code class="javascript">f.field('#ssn', {...})
@@ -118,7 +116,7 @@
           <label for="birth-date" class="flex justify-content-between">
             Birth date <b>(MM/DD/YYYY)</b>
           </label>
-          <span class="field-space"></span>
+          <span class="field-space form-control"></span>
         </div>
         <pre>
           <code class="javascript">f.field('#password', {...})
@@ -131,7 +129,7 @@
           <label for="cc-exp-short" class="flex justify-content-between">
             Expiration date <b>MM/YY</b>
           </label>
-          <span class="field-space"></span>
+          <span class="field-space form-control"></span>
         </div>
         <pre>
           <code class="javascript">f.field('#cc-exp-short',
@@ -142,7 +140,7 @@
       <div id="cc-exp-full" class="inner-container">
         <div class="mb-5">
           <label for="cc-exp-full" class="flex justify-content-between"> Expiration date <b>MM/YYYY</b></label>
-          <span class="field-space"></span>
+          <span class="field-space form-control"></span>
         </div>
         <pre>
           <code class="javascript">f.field('#cc-exp-full .field-space',
