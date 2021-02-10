@@ -633,7 +633,8 @@
   }
 
   .pii-form-example #pii-ssn {
-    width: 30%;
+    width: 40%;
+    min-width: 175px;
   }
 
   .masked-inputs-form {
