@@ -39,7 +39,7 @@ const cardNumber = f.field('#cc-number .form-control', {
 const cvv = f.field('#cc-cvc .form-control', {
   type: 'card-security-code',
   name: 'cardCvc',
-  placeholder: '344',
+  placeholder: 'cvc',
   validations: ['required', 'validCardSecurityCode'],
   autoComplete: 'cc-csc',
   css,
