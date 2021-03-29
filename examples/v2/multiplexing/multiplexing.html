@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>VGS Collect Credit Card Example</title>
+  <title>VGS Collect + Multiplexing</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -200,6 +200,28 @@
     }, function (errors) {
       document.getElementById('result').innerHTML = errors;
     });
+
+
+
+
+
+
+    const script = document.createElement('script');
+    script.src = `https://js.verygoodvault.com/vgs-collect/1.5.6/AC5aNomkDgpBTryS2ZhMEpcn.js`;
+    document.head.append(script);
+    script.onload = () => {
+      // script was sussessfully loaded and we can check for VGS Collect instance
+      if (window.VGSCollect) {
+        // Init Collect Form .... ;
+      } else {
+        console.log('VGS Collect is undefined. The error happened in the code.');
+      }
+      console.log('Script was successfully loaded!');
+    };
+    // Errors that occur during the loading of the script
+    script.onerror = () => {
+      console.log(`Request ${traceId} was blocked`);
+    };
 </script>
 </body>
 </html>

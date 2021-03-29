@@ -1,4 +1,4 @@
-# VGS Collect Credit Card Example
+# VGS Collect Credit Card Example + Multiplexing
 
 ## How to set up this example
 
