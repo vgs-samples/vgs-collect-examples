@@ -39,3 +39,10 @@ Here we've collected examples of library use cases:
 [Code example is here](examples/v2/pii-example)
 
 [GitHub Pages example](https://verygoodsecurity.github.io/vgs-collect-examples/#pii-example)
+
+
+### 5. VGS Collect + Multiplexing
+
+[Code example is here](examples/v2/multiplexing)
+
+[Multiplexing GH Repo](https://github.com/verygoodsecurity/multiplexing)
