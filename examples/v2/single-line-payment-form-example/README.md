@@ -1,4 +1,6 @@
-# VGS Collect Login Data Example
+# VGS Collect Single Line Credit Card Example
+
+<img src="https://gph.is/g/EBBB87K" />
 
 ## How to set up this example
 
@@ -20,4 +22,4 @@ const form = VGSCollect.create('<vault-id>', '<environment>', function(state) {}
 4. Integrate with VGS creating [inbound connection](https://www.verygoodsecurity.com/docs/getting-started#securing-your-inbound-connection) (or route) on [VGS Dashboard](https://dashboard.verygoodsecurity.com/) and submit Collect form
 
 
-[Login data Example live view](https://verygoodsecurity.github.io/vgs-collect-examples/#login-data-example)
+[Credit Card Example live view](https://verygoodsecurity.github.io/vgs-collect-examples/#credit-card-example)

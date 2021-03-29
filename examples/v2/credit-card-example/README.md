@@ -4,7 +4,7 @@
 
 1. `Copy` and `Paste` the content of an `.html` file into you application.
 
-2. Change link below to your personal VGS Collect library link. You can find it at VGS Collect page of [VGS Dashboard](https://dashboard.verygoodsecurity.com/)
+2. Change link below to the latest VGS Collect library link. You can find it at VGS Collect page of [VGS Dashboard](https://dashboard.verygoodsecurity.com/)
 
 ```html
 <script src="https://js.verygoodvault.com/vgs-collect/<version>/vgs-collect.js"></script>
