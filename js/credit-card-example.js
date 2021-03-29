@@ -30,8 +30,8 @@ const cardNumber = f.field('#cc-number .form-control', {
   validations: ['required', 'validCardNumber'],
   autoComplete: 'cc-number',
   showCardIcon: {
-    'width': '39px',
-    'height': '24px'
+    'width': '35px',
+    'height': '22px'
   },
   css,
 });
@@ -39,9 +39,13 @@ const cardNumber = f.field('#cc-number .form-control', {
 const cvv = f.field('#cc-cvc .form-control', {
   type: 'card-security-code',
   name: 'cardCvc',
-  placeholder: 'cvc',
+  placeholder: 'CVC',
   validations: ['required', 'validCardSecurityCode'],
   autoComplete: 'cc-csc',
+  showCardIcon: {
+    'width': '35px',
+    'height': '22px'
+  },
   css,
 });
 
@@ -53,8 +57,6 @@ const expDate = f.field('#cc-expiration-date .form-control', {
   autoComplete: 'cc-exp',
   css,
 });
-
-cardNumber.setCVCDependency(cvv);
 
 Promise.all([cardHolderName.promise, cardNumber.promise, cvv.promise, expDate.promise]).then(function () {
     const fields = document.querySelectorAll('#cc-form .loading');
