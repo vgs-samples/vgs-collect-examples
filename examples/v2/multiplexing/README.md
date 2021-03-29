@@ -1,6 +1,6 @@
 # VGS Collect Credit Card Example + Multiplexing
 
-The VGS Multiplexing app facilitates payment multiplexing with integrations to 120+ gateways. This example shows how you can secure data through VGS Collect.js while using Miltiplexing app.
+The [VGS Multiplexing](https://github.com/verygoodsecurity/multiplexing/blob/master/integration/README.md) app facilitates payment multiplexing with integrations to 120+ gateways. This example shows how you can secure data through VGS Collect.js while using our payment gateway multiplexer.
 
 ## How to set up this example
 
