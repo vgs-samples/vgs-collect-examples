@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VGS Collect Credit Card Example</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script type="text/javascript" src="https://js.verygoodvault.com/vgs-collect/2.5.0/vgs-collect.js"></script>
+
+  <style>
+    body {
+      padding: 25px;
+    }
+
+    span[id*="cc-"] {
+      display: block;
+      height: 40px;
+      margin-bottom: 15px;
+    }
+
+    span[id*="cc-"] iframe {
+      height: 100%;
+      width: 100%;
+    }
+
+    pre {
+      font-size: 12px;
+    }
+
+    .form-field {
+      display: block;
+      width: 100%;
+      height: calc(2.25rem + 2px);
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+      transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+
+    .form-field iframe {
+      border: 0 none transparent;
+      height: 100%;
+      vertical-align: middle;
+      width: 100%;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+      <div class="row card card-outline-secondary">
+        <div class="card-body">
+          <h3 class="text-center">Credit Card Payment</h3>
+          <hr>
+          <div class="alert alert-info p-2">
+            Please fill in and submit a form to see redacted data in response window.
+          </div>
+          <form id="cc-form">
+            <div class="form-group">
+              <label for="cc-first-name">First Name</label>
+              <span id="cc-first-name" class="form-field">
+                <!--VGS Collect iframe for card name field will be here!-->
+              </span>
+            </div>
+            <div class="form-group">
+              <label for="cc-second-name">Last Name</label>
+              <span id="cc-second-name" class="form-field">
+                <!--VGS Collect iframe for card name field will be here!-->
+              </span>
+            </div>
+            <div class="form-group">
+              <label for="cc-number">Card number</label>
+              <span id="cc-number" class="form-field">
+                <!--VGS Collect iframe for card number field will be here!-->
+              </span>
+            </div>
+            <div class="form-group">
+              <label for="cc-expiration-date">Expiration date</label>
+              <span id="cc-expiration-date" class="form-field">
+              <!--VGS Collect iframe for expiration date field will be here!-->
+              </span>
+            </div>
+            <div class="form-group">
+              <label for="cc-cvc">CVC</label>
+              <span id="cc-cvc" class="form-field">
+              <!--VGS Collect iframe for CVC field will be here!-->
+              </span>
+            </div>
+
+            <!--Submit credit card form button-->
+            <button type="submit" class="btn btn-success btn-block">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="alert alert-secondary">
+        <h5 class="text-center">Instruction</h5>
+        <p>1. Go back to the VGS Collect tab on a Dashboard and change the library file to your own.</p>
+        <p>2. Make sure you initialize form using right environment param.</p>
+        <p>3. Create an inbound route, proceed to Logs on a Dashboard and start recording traffic.</p>
+        <p>4. Fill in and submit the form.</p>
+        <p>5. Open Logs, find your POST request and secure fields that you want to be redacted.</p>
+        <p>6. Submit form one more time.</p>
+      </div>
+      <div class="alert alert-warning">
+        <h5 class="text-center">Response</h5>
+        <pre id="result">
+          Submit a form to see result.
+        </pre>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!--Include script with VGS Collect form initialization-->
+<script>
+  // VGS Collect form initialization
+  const form = VGSCollect.create('tnt1bq2ys8o', 'sandbox', function(state) {});
+
+  // Create VGS Collect field for first name
+  form.field('#cc-first-name', {
+    type: 'text',
+    name: 'data.attributes.details.first_name',
+    placeholder: 'Joe Business',
+    validations: ['required'],
+    defaultValue: 'Flor',
+  });
+
+  // Create VGS Collect field for last name
+  form.field('#cc-second-name', {
+    type: 'text',
+    name: 'data.attributes.details.last_name',
+    placeholder: 'Joe Business',
+    validations: ['required'],
+    defaultValue: 'Master',
+  });
+
+  // Create VGS Collect field for credit card number
+  form.field('#cc-number', {
+    type: 'card-number',
+    name: 'data.attributes.details.number',
+    successColor: '#4F8A10',
+    errorColor: '#D8000C',
+    placeholder: '4111 1111 1111 1111',
+    validations: ['required', 'validCardNumber'],
+    defaultValue: '4111 1111 1111 1111',
+  });
+
+  // Create VGS Collect field for CVC
+  form.field('#cc-cvc', {
+    type: 'card-security-code',
+    name: 'data.attributes.details.verification_value',
+    placeholder: '344',
+    validations: ['required', 'validCardSecurityCode'],
+    defaultValue: '344',
+  });
+
+  // Create VGS Collect field for credit card expiration date
+  form.field('#cc-expiration-date', {
+    type: 'card-expiration-date',
+    name: 'data.attributes.details',
+    placeholder: '01 / 2022',
+    validations: ['required', 'validCardExpirationDate'],
+    serializers: [
+      { name: "separate", options: {monthName: 'month', yearName: 'year' }}
+    ],
+  });
+
+  // Submits all of the form fields by executing a POST request.
+  document.getElementById('cc-form')
+    .addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.submit('/api/v1/financial_instruments', {
+        mapDotToObject: 'merge',
+        data: {
+          data: {
+            type: "financial_instruments",
+            attributes: {
+              "instrument_type":"card",
+            }
+          }
+        }
+      }, function(status, data) {
+        document.getElementById('result').innerHTML = JSON.stringify(data.json, null, 4);
+      });
+    }, function (errors) {
+      document.getElementById('result').innerHTML = errors;
+    });
+</script>
+</body>
+</html>
