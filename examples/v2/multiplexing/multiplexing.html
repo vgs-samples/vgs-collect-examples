@@ -135,18 +135,16 @@
   form.field('#cc-first-name', {
     type: 'text',
     name: 'data.attributes.details.first_name',
-    placeholder: 'Joe Business',
+    placeholder: 'Joe',
     validations: ['required'],
-    defaultValue: 'Flor',
   });
 
   // Create VGS Collect field for last name
   form.field('#cc-second-name', {
     type: 'text',
     name: 'data.attributes.details.last_name',
-    placeholder: 'Joe Business',
+    placeholder: 'Business',
     validations: ['required'],
-    defaultValue: 'Master',
   });
 
   // Create VGS Collect field for credit card number
@@ -157,7 +155,6 @@
     errorColor: '#D8000C',
     placeholder: '4111 1111 1111 1111',
     validations: ['required', 'validCardNumber'],
-    defaultValue: '4111 1111 1111 1111',
   });
 
   // Create VGS Collect field for CVC
@@ -166,7 +163,6 @@
     name: 'data.attributes.details.verification_value',
     placeholder: '344',
     validations: ['required', 'validCardSecurityCode'],
-    defaultValue: '344',
   });
 
   // Create VGS Collect field for credit card expiration date
@@ -193,35 +189,13 @@
               "instrument_type":"card",
             }
           }
-        }
+        },
       }, function(status, data) {
-        document.getElementById('result').innerHTML = JSON.stringify(data.json, null, 4);
+        document.getElementById('result').innerHTML = JSON.stringify(data, null, 4);
       });
     }, function (errors) {
       document.getElementById('result').innerHTML = errors;
     });
-
-
-
-
-
-
-    const script = document.createElement('script');
-    script.src = `https://js.verygoodvault.com/vgs-collect/1.5.6/AC5aNomkDgpBTryS2ZhMEpcn.js`;
-    document.head.append(script);
-    script.onload = () => {
-      // script was sussessfully loaded and we can check for VGS Collect instance
-      if (window.VGSCollect) {
-        // Init Collect Form .... ;
-      } else {
-        console.log('VGS Collect is undefined. The error happened in the code.');
-      }
-      console.log('Script was successfully loaded!');
-    };
-    // Errors that occur during the loading of the script
-    script.onerror = () => {
-      console.log(`Request ${traceId} was blocked`);
-    };
 </script>
 </body>
 </html>
