@@ -1,6 +1,8 @@
 # VGS Collect Single Line Credit Card Example
 
-<img src="https://media.giphy.com/media/ChXpESX2cud6q140TZ/giphy.gif" />
+<p align="center">
+  <img src="https://media.giphy.com/media/DnE4mdPPLkbIeLO1lF/giphy.gif"/>
+</p>
 
 ## How to set up this example
 
