@@ -3,30 +3,30 @@
 
 The [VGS Multiplexing](https://github.com/verygoodsecurity/multiplexing/blob/master/integration/README.md) app facilitates payment multiplexing with integrations to 120+ gateways. This example shows how you can secure data through VGS Collect.js while using our payment gateway multiplexer.
 
-## Flow
+## Flow diagram
 
 <p align="center">
   <img src="https://api.media.atlassian.com/file/804e00b0-78b7-4738-b6f5-a82224a5e8af/binary?token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI5N2Y2ODMyNS0yNTlhLTQxZjAtYWQyNi1iYjA4ZmVjZWQyZGQiLCJhY2Nlc3MiOnsidXJuOmZpbGVzdG9yZTpmaWxlOjgwNGUwMGIwLTc4YjctNDczOC1iNmY1LWE4MjIyNGE1ZThhZiI6WyJyZWFkIl19LCJleHAiOjE2MTgwMDYyMjUsIm5iZiI6MTYxNzkyMzI0NX0.FGxs70deJGR5iqb1Ew7Bz467E2KxpTkURST0o5OTUiE&client=97f68325-259a-41f0-ad26-bb08feced2dd&name=multiplexing-runtime-flow.png" />
 </p>
 
-## 1. Run Mulptiplexing application
+## 1. Run Multiplexing application
 
-Follow the instructions and install 
-<a href="https://github.com/verygoodsecurity/multiplexing/blob/master/integration/README.md" taraget="_blank"></a> app. 
+Follow the instructions and run 
+<a href="https://github.com/verygoodsecurity/multiplexing/blob/master/integration/README.md" taraget="_blank">Multiplexing</a> app. 
 Please reach out to our <a href="mailto:support@verygoodsecurirty.com">support@verygoodsecurirty.com</a> and request access to the repo if you're interested in the product.
 
 ## 2. Setup Collect.js Form
 
-1. Open `multiplexing.html` file and follow instructions on the screen.
+- Download and open locally `multiplexing.html` file in the browser.
 
-2. Change the link below to the latest VGS Collect library link. You can find it at VGS Collect page of [VGS Dashboard](https://dashboard.verygoodsecurity.com/)
+- Change the link below to the latest VGS Collect library link:
 
 ```html
 <script src="https://js.verygoodvault.com/vgs-collect/<version>/vgs-collect.js"></script>
 ```
 Full list of available versions with release notes you can find in our [Changelog](https://www.verygoodsecurity.com/docs/vgs-collect/js/changelog).
 
-3. Change `<vault-id>` to your vault id to initialize your Collect form:
+- Replace the placeholders to your vault id and environment in order to use Collect form:
 
 ```javascript
 const form = VGSCollect.create('<vault-id>', '<environment>', function(state) {});
@@ -34,11 +34,11 @@ const form = VGSCollect.create('<vault-id>', '<environment>', function(state) {}
 
 ## 3. Setup Inbound Route
 
-Follow instructions below if you don't have Inbound Route configured yet.
+Skip this step if you already have configured Inbound Route for the Multiplexing app.
 
-1. Download `inbound.yaml` provided above and replace `destination_override_endpoint` in line 3 with the Multiplexing app <a href="https://github.com/verygoodsecurity/multiplexing/blob/master/integration/README.md#deployment" target="blank">public URL</a>.
+- Download `inbound.yaml` provided above and replace `destination_override_endpoint` in line 3 with the Multiplexing app <a href="https://github.com/verygoodsecurity/multiplexing/blob/master/integration/README.md#deployment" target="blank">public URL</a>.
 
-2. Import fixed `inbound.yaml` file to the <a href="https://dashboard.verygoodsecurity.com/" target="_blank">Dashboard</a>. Navigate to the `Dashboard` -> `Routes` -> `Add Route` -> `YAML file`:
+- Import fixed `inbound.yaml` file to the <a href="https://dashboard.verygoodsecurity.com/" target="_blank">Dashboard</a>. Navigate to the `Dashboard` -> `Routes` -> `Add Route` -> `YAML file`:
 
 <p align="center">
 <img src="https://media.giphy.com/media/OgBQvlslOaDMeFrHJE/giphy.gif" />
