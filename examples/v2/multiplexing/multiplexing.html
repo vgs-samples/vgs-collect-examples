@@ -7,17 +7,16 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <script type="text/javascript" src="https://js.verygoodvault.com/vgs-collect/2.5.0/vgs-collect.js"></script>
+  <script type="text/javascript" src="https://js.verygoodvault.com/vgs-collect/2.6.0/vgs-collect.js"></script>
 
   <style>
     body {
       padding: 25px;
     }
 
-    span[id*="cc-"] {
-      display: block;
-      height: 40px;
-      margin-bottom: 15px;
+    form {
+      max-width: 600px;
+      margin: 0 auto;
     }
 
     span[id*="cc-"] iframe {
@@ -32,15 +31,14 @@
     .form-field {
       display: block;
       width: 100%;
-      height: calc(2.25rem + 2px);
-      padding: .375rem .75rem;
-      font-size: 1rem;
-      line-height: 1.5;
-      color: #495057;
-      background-color: #fff;
-      background-clip: padding-box;
-      border: 1px solid #ced4da;
+      margin-bottom: 15px;
+      padding-top: 0;
+      padding-bottom: 0;
+      box-shadow: 0px 0px 6px rgb(23 31 39 / 30%);
+      border: 1px solid transparent;
+      height: 2.5rem;
       border-radius: .25rem;
+      padding: 0 12px;
       transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     }
 
@@ -54,69 +52,102 @@
     p {
       margin-bottom: 10px;
     }
+
+    label {
+      font-weight: 600;
+      color: #526570;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .btn {
+      width: 100%;
+      background-color: #07193A;
+      border-color: #07193A;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
-<main>
+<main> 
+  <h2 class="text-center mb-5">Collect.js + Multiplexing Integration</h2>
   <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-4">
-      <div class="row card card-outline-secondary">
-        <div class="card-body">
-          <h3 class="text-center">Credit Card Payment</h3>
-          <hr>
-          <div class="alert alert-info p-2">
-            Please fill in and submit a form to see redacted data in response window.
-          </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="text-center">Collect.js Secure Form</h3>
           <form id="cc-form">
             <div class="form-group">
-              <label for="cc-first-name">First Name</label>
+              <label for="cc-first-name">*First Name</label>
               <span id="cc-first-name" class="form-field">
                 <!--VGS Collect iframe for card name field will be here!-->
               </span>
             </div>
             <div class="form-group">
-              <label for="cc-second-name">Last Name</label>
+              <label for="cc-second-name">*Last Name</label>
               <span id="cc-second-name" class="form-field">
                 <!--VGS Collect iframe for card name field will be here!-->
               </span>
             </div>
             <div class="form-group">
-              <label for="cc-number">Card number</label>
+              <label for="cc-number">*Card number</label>
               <span id="cc-number" class="form-field">
                 <!--VGS Collect iframe for card number field will be here!-->
               </span>
             </div>
-            <div class="form-group">
-              <label for="cc-expiration-date">Expiration date</label>
-              <span id="cc-expiration-date" class="form-field">
-              <!--VGS Collect iframe for expiration date field will be here!-->
-              </span>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="cc-expiration-date">*Expiration date</label>
+                  <span id="cc-expiration-date" class="form-field">
+                  <!--VGS Collect iframe for expiration date field will be here!-->
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="cc-cvc">*CVC</label>
+                  <span id="cc-cvc" class="form-field">
+                  <!--VGS Collect iframe for CVC field will be here!-->
+                  </span>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="cc-cvc">CVC</label>
-              <span id="cc-cvc" class="form-field">
-              <!--VGS Collect iframe for CVC field will be here!-->
-              </span>
-            </div>
-
             <!--Submit credit card form button-->
-            <button type="submit" class="btn btn-success btn-block">Submit</button>
+            <button type="submit" class="btn">Submit</button>
           </form>
         </div>
       </div>
     </div>
     <div class="col-md-4">
-      <div class="alert alert-secondary">
-        <h5 class="text-center">Instruction</h5>
-        <p>1. Make sure you initialize form using correct vault id and environment params.</p>
-        <p>2. Create an inbound route, proceed to Logs on a Dashboard and start recording traffic.</p>
-        <p>3. Fill in and submit the form.</p>
-        <p>4. Open Logs, find your POST request and secure fields that you want to be redacted.</p>
-        <p>5. Submit form one more time.</p>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="text-center">Instruction:</h5>
+          <ol>
+            <li class="mb-3">
+              Replace placeholder with your own vault id and environment in order to initialize Collect.js form:
+              <code>VGSCollect.create('tntXXXXXXXX', 'sandbox', function(state) {})</code>
+            </li>
+            <li class="mb-3">
+              Make sure you have an <a href="https://github.com/AnnaKudriasheva/vgs-collect-examples/tree/master/examples/v2/multiplexing#how-to-set-up-this-example" target="_blank">Inbound Route</a> configured properly for this vault with valid Upstream Host (host of the multiplexer application). 
+              Please use <code>inbound.yaml</code> as a template if you don't have one.
+            </li>
+            <li class="mb-3">
+              Fill in and submit the form with the <a href="https://www.verygoodsecurity.com/docs/vgs-collect/test-data" targfet="_blank">test data</a>.
+              Form submit action will perform POST request to the <code>/api/v1/financial_instruments</code> endpoint with needed payload structure.
+            </li>
+            <li class="mb-3">
+              Check <b>Response</b> section below for aliased data.
+            </li>
+            <li class="mb-3">
+              Check <b>Financial Instruments List</b> under Financial Instruments tab in the Multiplexing application.
+            </li>
+          </ol>
+        </div>
       </div>
-      <div class="alert alert-warning">
-        <h5 class="text-center">Response</h5>
+      <div class="alert alert-primary">
+        <h5 class="text-center">Response (aliased Payment Instrument)</h5>
         <pre id="result">
           Submit a form to see result.
         </pre>
@@ -130,12 +161,24 @@
   // VGS Collect form initialization
   const form = VGSCollect.create('<vault-id>', '<environment>', function(state) {});
 
+  const css = {
+    '&::placeholder': {
+      'color': '#C8D0DB',
+    },
+    '&::-webkit-input-placeholder': {
+      'line-height': 'normal!important',
+    },
+    'font-family': '"Segoe UI", sans-serif',
+    'font-size': '16px',
+  }
+
   // Create VGS Collect field for first name
   form.field('#cc-first-name', {
     type: 'text',
     name: 'data.attributes.details.first_name',
     placeholder: 'Joe',
     validations: ['required'],
+    css
   });
 
   // Create VGS Collect field for last name
@@ -144,6 +187,7 @@
     name: 'data.attributes.details.last_name',
     placeholder: 'Business',
     validations: ['required'],
+    css
   });
 
   // Create VGS Collect field for credit card number
@@ -154,25 +198,30 @@
     errorColor: '#D8000C',
     placeholder: '4111 1111 1111 1111',
     validations: ['required', 'validCardNumber'],
+    showCardIcon: true,
+    css
   });
 
   // Create VGS Collect field for CVC
   form.field('#cc-cvc', {
     type: 'card-security-code',
     name: 'data.attributes.details.verification_value',
-    placeholder: '344',
+    placeholder: 'CVC',
     validations: ['required', 'validCardSecurityCode'],
+    showCardIcon: true,
+    css
   });
 
   // Create VGS Collect field for credit card expiration date
   form.field('#cc-expiration-date', {
     type: 'card-expiration-date',
     name: 'data.attributes.details',
-    placeholder: '01 / 2022',
+    placeholder: 'MM / YYYY',
     validations: ['required', 'validCardExpirationDate'],
     serializers: [
       { name: "separate", options: {monthName: 'month', yearName: 'year' }}
     ],
+    css
   });
 
   // Submits all of the form fields by executing a POST request.
