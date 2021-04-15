@@ -13,7 +13,7 @@ The [VGS Multiplexing](https://github.com/verygoodsecurity/multiplexing/blob/mas
 
 Follow the instructions and run 
 <a href="https://github.com/verygoodsecurity/multiplexing/blob/master/integration/README.md" taraget="_blank">Multiplexing</a> app. 
-Please reach out to our <a href="mailto:support@verygoodsecurirty.com">support@verygoodsecurirty.com</a> and request access to the repo if you're interested in the product.
+Please reach out to our <a href="mailto:support@verygoodsecurity.com">support@verygoodsecurity.com</a> and request access to the repo if you're interested in the product.
 
 ## 2. Setup Collect.js Form
 
