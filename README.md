@@ -8,6 +8,8 @@ The VGS Collect library is a javascript library that allows you to integrate sec
 
 Once the fields are initialized the library communicates the state of the fields through a JavaScript callback. The state object includes information about the validity, focused value and if the user has entered information in the field.
 
+<img width="600px" src="https://www.verygoodsecurity.com/docs/vgs_theme/static/img/vgs-collect-diagram.png"/>
+
 ## Explore VGS Collect documentation
 
 You can find more useful information about VGS Collect API in our [docs](https://www.verygoodsecurity.com/docs/vgs-collect/what-is-it).
