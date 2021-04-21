@@ -1,8 +1,8 @@
-# VGS Collect Login Data Example
+# Compare Field Values Example
 
 ## How to set up this example
 
-1. `Copy` and `Paste` the content of an `.html` file into you application.
+1. `Copy` and `Paste` the content of the appropriate files into you application.
 
 2. Change link below to the latest VGS Collect library link. You can find it at VGS Collect page of [VGS Dashboard](https://dashboard.verygoodsecurity.com/)
 
@@ -20,4 +20,4 @@ const form = VGSCollect.create('<vault-id>', '<environment>', function(state) {}
 4. Integrate with VGS creating [inbound connection](https://www.verygoodsecurity.com/docs/getting-started#securing-your-inbound-connection) (or route) on [VGS Dashboard](https://dashboard.verygoodsecurity.com/) and submit Collect form
 
 
-[Login data Example live view](https://verygoodsecurity.github.io/vgs-collect-examples/#login-data-example)
+[Compare Field Values Example live view](https://codepen.io/Averanya/pen/ZEBRYdO)
