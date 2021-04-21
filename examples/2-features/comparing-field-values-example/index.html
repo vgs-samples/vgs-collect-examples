@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>VGS Collect.js - Comparing field values</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script src="https://js.verygoodvault.com/vgs-collect/2.4.0/vgs-collect.js"></script>
+<body>
+  <form id="collect-form">
+    <input type="hidden" name="token" />
+    <div class="group">
+      <label>
+        <span>SSN</span>
+        <div id="ssn" class="field"></div>
+      </label>
+      <label>
+        <span>Confirm SSN</span>
+        <div id="ssn-confirm" class="field"></div>
+      </label>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  <pre id="response"></pre>
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
