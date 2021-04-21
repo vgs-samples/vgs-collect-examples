@@ -20,31 +20,31 @@ Here we've collected examples of library use cases:
 
 ### 1. Capturing credit card data
 
-[Code example is here](examples/credit-card-example)
+[Code example is here](examples/1-usecases/credit-card-example)
 
 [GitHub Pages example](https://verygoodsecurity.github.io/vgs-collect-examples/#credit-card-example)
 
 ### 2. Capturing shipping info along with billing
 
-[Code example is here](examples/shipping-info-example)
+[Code example is here](examples/1-usecases/shipping-info-example)
 
 [GitHub Pages example](https://verygoodsecurity.github.io/vgs-collect-examples/#shipping-info-example)
 
 ### 3. Capturing personal (log in) data (username & password/ email & password)
 
-[Code example is here](examples/login-data-example)
+[Code example is here](examples/1-usecases/login-data-example)
 
 [GitHub Pages example](https://verygoodsecurity.github.io/vgs-collect-examples/#login-data-example)
 
 ### 4. Capturing PII for background checks (driver licenses, social security cards, passports)  
  
-[Code example is here](examples/pii-example)
+[Code example is here](examples/1-usecases/pii-example)
 
 [GitHub Pages example](https://verygoodsecurity.github.io/vgs-collect-examples/#pii-example)
 
 
 ### 5. VGS Collect + Multiplexing
 
-[Code example is here](examples/multiplexing-example)
+[Code example is here](examples/1-usecases/multiplexing-example)
 
 [Multiplexing GH Repo](https://github.com/verygoodsecurity/multiplexing)
