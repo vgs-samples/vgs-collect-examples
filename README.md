@@ -25,7 +25,7 @@ You can find more useful information about VGS Collect API in our [docs](https:/
 |Login data| <ul><li>Email</li><li>Password</li></ul>| [Code](examples/usecases/login-data-example) | [Demo](https://verygoodsecurity.github.io/vgs-collect-examples/#login-data-example) |
 |PII data| <ul><li>Full name</li><li>SSN</li></ul> | [Code](examples/usecases/pii-example) | [Demo](https://verygoodsecurity.github.io/vgs-collect-examples/#pii-example) |
 |Shipping info| <ul><li>Full name</li><li>Address</li><li>Country</li><li>City</li><li>State</li><li>ZIP code</li></ul>| [Code](examples/usecases/shipping-info-example) | [Demo](https://verygoodsecurity.github.io/vgs-collect-examples/#shipping-info-example) |
-|Multiplexing| ![]() | [Code](examples/usecases/multiplexing-example) | [Contact us](mailto:support@verygoodsecurity.com) |
+|Multiplexing | <ul><li>Cardholder name</li><li>Card number</li><li>Expiration date</li><li>CVC</li></ul> configured to match multiplexing API | [Code](examples/usecases/multiplexing-example) | [Contact us](mailto:support@verygoodsecurity.com) |
 
 ### Feature examples
 | Name | Preview | Code example | Live demo |
