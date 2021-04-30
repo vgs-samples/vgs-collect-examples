@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://www.verygoodsecurity.com/theme/css/main.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        padding: 20px;
+      }
+      .masked-inputs-form {
+        max-width: 100%;
+        margin-bottom: 40px;
+      }
+
+      iframe {
+        height: 100%;
+      }
+
+      .masked-inputs-form .field-space {
+        display: block;
+        height: 50px;
+        padding: 9px 12px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        background-color: #eff4ff8c;
+        box-shadow: 0 1px 3px 0 #b1bdcd;
+        min-width: 100%;
+        max-width: 500px;
+      }
+
+      .masked-inputs-form label {
+        font-family: "Helvetica Neue", "sans-serif";
+        font-weight: 200;
+        font-size: 16px;
+        color: #576f7f;
+      }
+
+      .masked-inputs-form pre {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        font-size: 14px;
+        width: 45%;
+      }
+
+      .masked-inputs-form .inner-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    </style>
+    <script src="https://js.verygoodvault.com/vgs-collect/1/vgs-collect-examples.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <form id="masked-inputs-form" class="masked-inputs-form">
+          <div id="cc-holder" class="inner-container">
+            <div class="mb-5">
+              <label for="cc-holder" class="flex justify-content-between">
+                Card Holder <b>Alphabetic only</b></label
+              >
+              <span class="field-space"></span>
+            </div>
+          </div>
+          <div id="zip-code" class="inner-container">
+            <div class="mb-5">
+              <label for="zip-code" class="flex justify-content-between">
+                Zip code <b>Numeric only</b></label
+              >
+              <span class="field-space"></span>
+            </div>
+          </div>
+          <div id="phone-number" class="inner-container">
+            <div class="mb-5">
+              <label for="phone-number" class="flex justify-content-between">
+                Phone number <b>+1 (XXX) XXX-XX-XX</b></label
+              >
+              <span class="field-space"></span>
+            </div>
+          </div>
+          <div id="ssn" class="inner-container">
+            <div class="mb-5">
+              <label for="ssn" class="flex justify-content-between">
+                SSN <b>XXX-XX-XXXX</b>
+              </label>
+              <span class="field-space"></span>
+            </div>
+          </div>
+          <div id="birth-date" class="inner-container">
+            <div class="mb-5">
+              <label for="birth-date" class="flex justify-content-between">
+                Birth date <b>(MM/DD/YYYY)</b></label
+              >
+              <span class="field-space"></span>
+            </div>
+          </div>
+          <div id="cc-exp-short" class="inner-container">
+            <div class="mb-5">
+              <label for="cc-exp-short" class="flex justify-content-between">
+                Expiration date <b>MM/YY</b></label
+              >
+              <span class="field-space"></span>
+            </div>
+          </div>
+          <div id="cc-exp-full" class="inner-container">
+            <div class="mb-5">
+              <label for="cc-exp-full" class="flex justify-content-between">
+                Expiration date <b>MM/YYYY</b></label
+              >
+              <span class="field-space"></span>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success">Submit</button>
+          <pre id="response"></pre>
+        </form>
+      </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

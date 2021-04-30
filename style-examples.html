@@ -1,114 +1,161 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.ico" />
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="favicon.ico">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://www.verygoodsecurity.com/theme/css/main.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 
-  <link rel="stylesheet" type="text/css" href="https://www.verygoodsecurity.com/theme/css/main.css"/>
-  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/color-brewer.min.css"
+    />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/color-brewer.min.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://js.verygoodvault.com/vgs-collect/2.5.0/vgs-collect.js"></script>
+  </head>
 
-  <script src="https://js.verygoodvault.com/vgs-collect/2.5.0/vgs-collect.js"></script>
-</head>
-
-<body>
-<main>
-  <div class="alert alert-success alert-dismissible hidden show fade request-success" role="alert">
-    <strong>Request successfully submitted!</strong>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-
-  <div class="alert alert-danger alert-dismissible hidden show fade request-error" role="alert">
-    <strong></strong>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-
-  <section class="container pt-5 py-lg-5 pb-5">
-    <div class="text-center ">
-      <h1 class="mb-2">VGS Collect.js examples</h1>
-      <p class="mb-4">VGS Collect.js is a javascript library that allows you to integrate secure fields with non-secure
-        fields in your page.
-        <br>The secure fields behave like traditional input fields while preventing access to the unsecured data.</p>
-      <div class="flex justify-content-center navigation-links">
-        <a target="_blank" href="https://www.verygoodsecurity.com/docs/vgs-collect/what-is-it" class="btn btn-primary">
-          Documentation
-        </a>
-        <a target="_blank" href="./style-examples.html" class="btn btn-primary">
-          Style Examples
-        </a>
-        <a target="_blank" href="./masked-examples.html" class="btn btn-primary">
-          Input Masking
-        </a>
+  <body>
+    <main>
+      <div
+        class="alert alert-success alert-dismissible hidden show fade request-success"
+        role="alert"
+      >
+        <strong>Request successfully submitted!</strong>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-    </div>
-  </section>
 
-  <section id="credit-card-example" class="container pt-lg-5">
-    <div class="row">
-      <div class="col-md-6">
-        <a
-          href="https://codesandbox.io/s/qkwrmwyyk9?fontsize=14&module=%2Fscript.js"
-          target="_blank"
-          class="source-link">
-          <i class="fas fa-code"></i>
-          Play with the style
-        </a>
+      <div
+        class="alert alert-danger alert-dismissible hidden show fade request-error"
+        role="alert"
+      >
+        <strong></strong>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
 
-        <div class="form-container">
-          <div class="card-front">
-            <div class="shadow"></div>
-            <div class="image-container">
-              <span class="amount">PAYING: <strong>$1</strong></span>
-              <span class="card-image">
-            <i class="far fa-credit-card"></i>
-          </span>
-            </div>
-            <form id="cc-form">
-              <div id="cc-number" class="card-number-container">
-                <label for="cc-number" class="hidden">Card Number</label>
-                <span class="field-space"></span>
-              </div>
-
-              <div id="cc-holder" class="cardholder-container">
-                <label for="cc-holder" class="hidden">Card Holder</label>
-                <span class="field-space"></span>
-              </div>
-
-              <div id="cc-exp" class="exp-container">
-                <label for="cc-exp" class="hidden">Expiration</label>
-                <span class="field-space"></span>
-              </div>
-              <div id="cc-cvc" class="cvc-container">
-                <label for="cc-cvc" class="hidden"> CVC/CVV</label>
-                <span class="field-space"></span>
-                <!--<p>Last 3 or 4 digits</p>-->
-              </div>
-            </form>
+      <section class="container pt-5 py-lg-5 pb-5">
+        <div class="text-center">
+          <h1 class="mb-2">VGS Collect.js examples</h1>
+          <p class="mb-4">
+            VGS Collect.js is a javascript library that allows you to integrate
+            secure fields with non-secure fields in your page. <br />The secure
+            fields behave like traditional input fields while preventing access
+            to the unsecured data.
+          </p>
+          <div class="flex justify-content-center navigation-links">
+            <a
+              target="_blank"
+              href="https://www.verygoodsecurity.com/docs/vgs-collect/what-is-it"
+              class="btn btn-primary"
+            >
+              Documentation
+            </a>
+            <a
+              target="_blank"
+              href="./style-examples.html"
+              class="btn btn-primary"
+            >
+              Style Examples
+            </a>
+            <a
+              target="_blank"
+              href="./masked-examples.html"
+              class="btn btn-primary"
+            >
+              Input Masking
+            </a>
           </div>
-          <div class="card-back">
-            <div class="card-stripe">
-            </div>
-          </div>
-          <button type="submit" class="card-btn" id="cc-form-submit">
-            Submit <i class="fas fa-arrow-circle-right"></i>
-          </button>
         </div>
-      </div>
-      <div class="col-md-6 styles-code-example">
-      <pre><code class="javascript">
+      </section>
+
+      <section id="credit-card-example" class="container pt-lg-5">
+        <div class="row">
+          <div class="col-md-6">
+            <a
+              href="https://codesandbox.io/s/qkwrmwyyk9?fontsize=14&module=%2Fscript.js"
+              target="_blank"
+              class="source-link"
+            >
+              <i class="fas fa-code"></i>
+              Play with the style
+            </a>
+
+            <div class="form-container">
+              <div class="card-front">
+                <div class="shadow"></div>
+                <div class="image-container">
+                  <span class="amount">PAYING: <strong>$1</strong></span>
+                  <span class="card-image">
+                    <i class="far fa-credit-card"></i>
+                  </span>
+                </div>
+                <form id="cc-form">
+                  <div id="cc-number" class="card-number-container">
+                    <label for="cc-number" class="hidden">Card Number</label>
+                    <span class="field-space"></span>
+                  </div>
+
+                  <div id="cc-holder" class="cardholder-container">
+                    <label for="cc-holder" class="hidden">Card Holder</label>
+                    <span class="field-space"></span>
+                  </div>
+
+                  <div id="cc-exp" class="exp-container">
+                    <label for="cc-exp" class="hidden">Expiration</label>
+                    <span class="field-space"></span>
+                  </div>
+                  <div id="cc-cvc" class="cvc-container">
+                    <label for="cc-cvc" class="hidden"> CVC/CVV</label>
+                    <span class="field-space"></span>
+                    <!--<p>Last 3 or 4 digits</p>-->
+                  </div>
+                </form>
+              </div>
+              <div class="card-back">
+                <div class="card-stripe"></div>
+              </div>
+              <button type="submit" class="card-btn" id="cc-form-submit">
+                Submit <i class="fas fa-arrow-circle-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-md-6 styles-code-example">
+            <pre><code class="javascript">
         const field = form.field('#space-for-field', {
           type: 'card-number',
           name: 'card-number',
@@ -133,142 +180,175 @@
         });
       </code>
       </pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h4 class="center-block mb-4">Field styling examples</h4>
+        <div class="example-1 px-3">
+          <a
+            href="https://codesandbox.io/s/pyqj0xo467?fontsize=14&module=%2Fscript.js"
+            target="_blank"
+            class="source-link"
+          >
+            <i class="fas fa-code"></i>
+            Play with the style
+          </a>
+          <form class="payment-form-example" id="payment-form">
+            <div class="header">
+              <p class="title">Payment form</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="total">Total</span>
+                <span class="amount">$ 32.99</span>
+              </div>
+            </div>
+            <div class="fields">
+              <div id="payment-cc-number" class="field-container">
+                <label for="cc-number">Card Number</label>
+                <span class="field-space"></span>
+              </div>
+
+              <div id="payment-cc-holder" class="field-container">
+                <label for="cc-holder">Card Holder</label>
+                <span class="field-space"></span>
+              </div>
+              <div id="payment-cc-exp" class="field-container">
+                <label for="cc-exp">Expiration</label>
+                <span class="field-space"></span>
+              </div>
+              <div id="payment-cc-cvc" class="field-container">
+                <label for="cc-cvc"> CVC/CVV</label>
+                <span class="field-space"></span>
+                <!--<p>Last 3 or 4 digits</p>-->
+              </div>
+              <button type="submit" class="btn" id="payment-form-submit">
+                Pay
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="example-2 px-3">
+          <a
+            href="https://codesandbox.io/s/5v2vpqp39p?fontsize=14&module=%2Fscript.js"
+            target="_blank"
+            class="source-link"
+          >
+            <i class="fas fa-code"></i>
+            Play with the style
+          </a>
+          <form class="signup-form-example mb-5" id="signup-form">
+            <div id="signup-email" class="field-container">
+              <label for="signup-email" class="hidden">Email or phone</label>
+              <span class="field-space"></span>
+            </div>
+            <div id="signup-password" class="field-container">
+              <label for="signup-password" class="hidden">Password</label>
+              <span class="field-space"></span>
+            </div>
+            <div id="signup-name" class="field-container">
+              <label for="signup-name" class="hidden">Name</label>
+              <span class="field-space"></span>
+            </div>
+            <div id="signup-birthday" class="field-container">
+              <label for="signup-birthday" class="hidden">Birthday</label>
+              <span class="field-space"></span>
+            </div>
+            <button type="submit" class="btn" id="signup-form-submit">
+              Sign up
+            </button>
+          </form>
+        </div>
+
+        <div class="example-3 px-3">
+          <a
+            href="https://codesandbox.io/s/7m576jk5nj?fontsize=14&module=%2Fscript.js"
+            target="_blank"
+            class="source-link"
+          >
+            <i class="fas fa-code"></i>
+            Play with the style
+          </a>
+          <form
+            class="pii-form-example d-flex justify-content-between"
+            id="pii-form"
+          >
+            <div class="fields d-flex justify-content-between">
+              <div class="field-container" id="pii-first-name">
+                <label for="pii-first-name" class="hidden">Name</label>
+                <span class="field-space"></span>
+              </div>
+              <div
+                class="field-container d-flex align-items-center"
+                id="pii-ssn"
+              >
+                <label for="pii-ssn" class="mb-0">SSN</label>
+                <span class="field-space"></span>
+              </div>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer font-small cyan darken-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 py-2">
+            <div class="d-flex justify-content-center">
+              <a
+                href="https://github.com/verygoodsecurity/"
+                class="p-2"
+                target="_blank"
+              >
+                <i class="fab fa-github-square"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/18142614/"
+                class="p-2"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/verygoodsecurity/"
+                class="p-2"
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://twitter.com/getvgs" class="p-2" target="_blank">
+                <i class="fab fa-twitter-square"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/getvgs/"
+                class="p-2"
+                target="_blank"
+              >
+                <i class="fab fa-facebook-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section>
-    <h4 class="center-block mb-4">Field styling examples</h4>
-    <div class="example-1 px-3">
-      <a href="https://codesandbox.io/s/pyqj0xo467?fontsize=14&module=%2Fscript.js"
-         target="_blank"
-         class="source-link">
-        <i class="fas fa-code"></i>
-        Play with the style
-      </a>
-      <form class="payment-form-example" id="payment-form">
-        <div class="header">
-          <p class="title">Payment form</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <span class="total">Total</span>
-            <span class="amount">$ 32.99</span>
-          </div>
-        </div>
-        <div class="fields">
-          <div id="payment-cc-number" class="field-container">
-            <label for="cc-number">Card Number</label>
-            <span class="field-space"></span>
-          </div>
-
-          <div id="payment-cc-holder" class="field-container">
-            <label for="cc-holder">Card Holder</label>
-            <span class="field-space"></span>
-          </div>
-          <div id="payment-cc-exp" class="field-container">
-            <label for="cc-exp">Expiration</label>
-            <span class="field-space"></span>
-          </div>
-          <div id="payment-cc-cvc" class="field-container">
-            <label for="cc-cvc"> CVC/CVV</label>
-            <span class="field-space"></span>
-            <!--<p>Last 3 or 4 digits</p>-->
-          </div>
-          <button type="submit" class="btn" id="payment-form-submit">Pay</button>
-        </div>
-      </form>
-    </div>
-
-    <div class="example-2 px-3">
-      <a href="https://codesandbox.io/s/5v2vpqp39p?fontsize=14&module=%2Fscript.js"
-         target="_blank"
-         class="source-link">
-        <i class="fas fa-code"></i>
-        Play with the style
-      </a>
-      <form class="signup-form-example mb-5" id="signup-form">
-        <div id="signup-email" class="field-container">
-          <label for="signup-email" class="hidden">Email or phone</label>
-          <span class="field-space"></span>
-        </div>
-        <div id="signup-password" class="field-container">
-          <label for="signup-password" class="hidden">Password</label>
-          <span class="field-space"></span>
-        </div>
-        <div id="signup-name" class="field-container">
-          <label for="signup-name" class="hidden">Name</label>
-          <span class="field-space"></span>
-        </div>
-        <div id="signup-birthday" class="field-container">
-          <label for="signup-birthday" class="hidden">Birthday</label>
-          <span class="field-space"></span>
-        </div>
-        <button type="submit" class="btn" id="signup-form-submit">Sign up</button>
-      </form>
-    </div>
-
-    <div class="example-3 px-3">
-      <a href="https://codesandbox.io/s/7m576jk5nj?fontsize=14&module=%2Fscript.js"
-         target="_blank"
-         class="source-link">
-        <i class="fas fa-code"></i>
-        Play with the style
-      </a>
-      <form class="pii-form-example d-flex justify-content-between" id="pii-form">
-        <div class="fields d-flex justify-content-between">
-          <div class="field-container" id="pii-first-name">
-            <label for="pii-first-name" class="hidden">Name</label>
-            <span class="field-space"></span>
-          </div>
-          <div class="field-container d-flex align-items-center" id="pii-ssn">
-            <label for="pii-ssn" class="mb-0">SSN</label>
-            <span class="field-space"></span>
-          </div>
-        </div>
-        <button type="submit" class="btn">Submit</button>
-      </form>
-    </div>
-  </section>
-</main>
-<footer class="page-footer font-small cyan darken-3">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 py-2">
-          <div class="d-flex justify-content-center">
-            <a href="https://github.com/verygoodsecurity/" class="p-2" target="_blank">
-              <i class="fab fa-github-square"></i>
-            </a>
-            <a href="https://www.linkedin.com/company/18142614/" class="p-2" target="_blank">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.instagram.com/verygoodsecurity/" class="p-2" target="_blank">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://twitter.com/getvgs" class="p-2" target="_blank">
-              <i class="fab fa-twitter-square"></i>
-            </a>
-            <a href="https://www.facebook.com/getvgs/" class="p-2" target="_blank">
-              <i class="fab fa-facebook-square"></i>
-            </a>
-          </div>
-        </div>
+      <div class="footer-copyright text-center pb-3">
+        © 2019 VERY GOOD SECURITY, Inc.
       </div>
-    </div>
-    <div class="footer-copyright text-center pb-3">© 2019 VERY GOOD SECURITY, Inc.</div>
-</footer>
+    </footer>
 
-<script src="vendor/jquery-3.3.1.min.js"></script>
-<script src="vendor/bootstrap/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
-  $('.alert').alert();
-</script>
+    <script src="vendor/jquery-3.3.1.min.js"></script>
+    <script src="vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+      $(".alert").alert();
+    </script>
 
-<script src="js/script.js"></script>
-<script src="styles-examples/credit-card-custom.js"></script>
-<script src="styles-examples/payment-form-custom.js"></script>
-<script src="styles-examples/signup-form-custom.js"></script>
-<script src="styles-examples/pii-form-custom.js"></script>
-
-</body>
+    <script src="js/script.js"></script>
+    <script src="styles-examples/credit-card-custom.js"></script>
+    <script src="styles-examples/payment-form-custom.js"></script>
+    <script src="styles-examples/signup-form-custom.js"></script>
+    <script src="styles-examples/pii-form-custom.js"></script>
+  </body>
 </html>
