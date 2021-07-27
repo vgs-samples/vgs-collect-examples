@@ -6,7 +6,7 @@ var highlight = function (targetForm, jsonString) {
   $(targetForm)
     .closest(".example-container")
     .find(".response")
-    .html(jsonString);
+    .text(jsonString);
 };
 
 var highlightErrors = function (targetForm, errors) {
