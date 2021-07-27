@@ -1,12 +1,12 @@
 var highlight = function (targetForm, jsonString) {
-  jsonString = jsonString.replace(
-    /(\: )(\"tok_.+\")/g,
-    '$1<span class="highlighted">$2</span>'
-  );
+  // // jsonString = jsonString.replace(
+  // //   /(\: )(\"tok_.+\")/g,
+  // //   '$1<span class="highlighted">$2</span>'
+  // );
   $(targetForm)
     .closest(".example-container")
     .find(".response")
-    .html(jsonString);
+    .text(jsonString);
 };
 
 var highlightErrors = function (targetForm, errors) {
