@@ -24,4 +24,4 @@ const form = VGSCollect.create(
 
 4. Integrate with VGS creating [inbound connection](https://www.verygoodsecurity.com/docs/getting-started#securing-your-inbound-connection) (or route) on [VGS Dashboard](https://dashboard.verygoodsecurity.com/) and submit Collect form
 
-[Credit Card Example live view](https://verygoodsecurity.github.io/vgs-collect-examples/#credit-card-example)
+[Credit Card Example live view](https://vgs-samples.github.io/vgs-collect-examples/#credit-card-example)

@@ -24,4 +24,4 @@ const form = VGSCollect.create(
 
 4. Integrate with VGS creating [inbound connection](https://www.verygoodsecurity.com/docs/getting-started#securing-your-inbound-connection) (or route) on [VGS Dashboard](https://dashboard.verygoodsecurity.com/) and submit Collect form
 
-[PII Example live view](https://verygoodsecurity.github.io/vgs-collect-examples/#pii-example)
+[PII Example live view](https://vgs-samples.github.io/vgs-collect-examples/#pii-example)

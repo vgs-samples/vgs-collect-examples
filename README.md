@@ -21,10 +21,10 @@ You can find more useful information about VGS Collect API in our [docs](https:/
 ### Use case examples
 | Name | Used data | Code example | Live demo |
 |--|--|--|--|
-|Credit card|<ul><li>Cardholder name</li><li>Card number</li><li>Expiration date</li><li>CVC</li></ul>| [Code](examples/usecases/credit-card-example) | [Demo](https://verygoodsecurity.github.io/vgs-collect-examples/#credit-card-example) |
-|Login data| <ul><li>Email</li><li>Password</li></ul>| [Code](examples/usecases/login-data-example) | [Demo](https://verygoodsecurity.github.io/vgs-collect-examples/#login-data-example) |
-|PII data| <ul><li>Full name</li><li>SSN</li></ul> | [Code](examples/usecases/pii-example) | [Demo](https://verygoodsecurity.github.io/vgs-collect-examples/#pii-example) |
-|Shipping info| <ul><li>Full name</li><li>Address</li><li>Country</li><li>City</li><li>State</li><li>ZIP code</li></ul>| [Code](examples/usecases/shipping-info-example) | [Demo](https://verygoodsecurity.github.io/vgs-collect-examples/#shipping-info-example) |
+|Credit card|<ul><li>Cardholder name</li><li>Card number</li><li>Expiration date</li><li>CVC</li></ul>| [Code](examples/usecases/credit-card-example) | [Demo](https://vgs-samples.github.io/vgs-collect-examples/#credit-card-example) |
+|Login data| <ul><li>Email</li><li>Password</li></ul>| [Code](examples/usecases/login-data-example) | [Demo](https://vgs-samples.github.io/vgs-collect-examples/#login-data-example) |
+|PII data| <ul><li>Full name</li><li>SSN</li></ul> | [Code](examples/usecases/pii-example) | [Demo](https://vgs-samples.github.io/vgs-collect-examples/#pii-example) |
+|Shipping info| <ul><li>Full name</li><li>Address</li><li>Country</li><li>City</li><li>State</li><li>ZIP code</li></ul>| [Code](examples/usecases/shipping-info-example) | [Demo](https://vgs-samples.github.io/vgs-collect-examples/#shipping-info-example) |
 |Multiplexing | <ul><li>Cardholder name</li><li>Card number</li><li>Expiration date</li><li>CVC</li></ul> configured to match multiplexing API | [Code](examples/usecases/multiplexing-example) | [Contact us](mailto:support@verygoodsecurity.com) |
 
 ### Feature examples
@@ -41,4 +41,4 @@ You can find more useful information about VGS Collect API in our [docs](https:/
 | Name | Preview | Code example | Live demo |
 |--|--|--|--|
 |Floating labels| ![floating-labels](https://media.giphy.com/media/fwhcskQaiffQDGo04c/giphy.gif) | [Code](examples/customization/floating-labels-example) | [Demo](https://codepen.io/Averanya/pen/be03033d57f1498f6230da9c13adf083) |
-|Single line payment form| ![single-line-payment-form-](https://camo.githubusercontent.com/d364081f95ed94c412f9b429bdc45c9ae8b89ca45a95e981555e25e7de4becdc/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f446e45346d6450504c6b6249654c4f316c462f67697068792e676966) | [Code](examples/customization/single-line-payment-form-example) | [Demo](https://verygoodsecurity.github.io/vgs-collect-examples/#credit-card-example) |
+|Single line payment form| ![single-line-payment-form-](https://camo.githubusercontent.com/d364081f95ed94c412f9b429bdc45c9ae8b89ca45a95e981555e25e7de4becdc/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f446e45346d6450504c6b6249654c4f316c462f67697068792e676966) | [Code](examples/customization/single-line-payment-form-example) | [Demo](https://vgs-samples.github.io/vgs-collect-examples/#credit-card-example) |
