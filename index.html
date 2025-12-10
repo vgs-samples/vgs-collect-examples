@@ -23,12 +23,12 @@
 
     <link
       rel="stylesheet"
-      type="text/css"
+      type="text/css" 
       href="vendor/main.css"
     />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
-    <script src="https://js.verygoodvault.com/vgs-collect/2.23.0/vgs-collect.js"></script>
+    <script src="https://js.verygoodvault.com/vgs-collect/3.3.0/vgs-collect.js"></script>
   </head>
 
   <body>
@@ -585,7 +585,7 @@ Please complete the form and press "submit" to see a response.</pre
         </div>
       </div>
       <div class="footer-copyright text-center pb-3">
-        © 2024 VERY GOOD SECURITY, Inc.
+        © <span id="current-year"></span> VERY GOOD SECURITY, Inc.
       </div>
     </footer>
 
@@ -597,5 +597,13 @@ Please complete the form and press "submit" to see a response.</pre
     <script src="js/shipping-info-example.js"></script>
     <script src="js/login-data-example.js"></script>
     <script src="js/pii-example.js"></script>
+    <script>
+      (function () {
+        var el = document.getElementById('current-year');
+        if (el) {
+          el.textContent = new Date().getFullYear();
+        }
+      })();
+    </script>
   </body>
 </html>
